@@ -26,7 +26,7 @@ Once installed set your username and email
 `git config --global user.email [your email]`
 
 #### Repo initial download
-`git clone https://github.com/mmeneg/corda_vibrante.git` 
+`git clone https://github.com/mmeneg/lab_oefm.git` 
 create a new directory named after the project, used once to download the initial content.
 **Note:** all the command must be executed in the root directory created by Git.
 
