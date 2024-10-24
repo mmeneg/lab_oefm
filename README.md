@@ -60,25 +60,29 @@ For example `$\sqrt{3x-1}+(1+x)^2$` will render as $\sqrt{3x-1}+(1+x)^2$
 #### Block single line formulas
 Block formulas are render centrally aligned, the delimiter `\[` start the block while `\]` will end it
 For example
-`\[
+```
+\[
     L_{0}=(78.8 \pm 0.1) \ \text{cm}
-\]`
+\]
+```
 will render as 
-$$ L_{0}=(78.8 \pm 0.1) \ \text{cm} $$
+```math
+L_{0}=(78.8 \pm 0.1) \ \text{cm}
+```
 
 #### Block multi line formulas
 The delimiter `\begin{align*}` start the block while `\end{align*}` will end it.
 Use `&` to align the beginning character of a new line, use `\\` to end the line.
 For example
-`\begin{align*}
+```
+\begin{align*}
     &2A_{0}=(11.0 \pm 0.1) \ \text{cm} \\
     &L_{0,max}=(79.6 \pm 0.1) \ \text{cm} \\
     &cos{\alpha} = (0.990 \pm 0.002)
-\end{align*}`
+\end{align*}
+```
 will render as 
 ```math
 \begin{align*} &2A_{0}=(11.0 \pm 0.1) \ \text{cm} \\ &L_{0,max}=(79.6 \pm 0.1) \ \text{cm} \\ &cos{\alpha} = (0.990 \pm 0.002) \end{align*}
 ```
 
-**The Cauchy-Schwarz Inequality**
-$$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
