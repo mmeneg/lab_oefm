@@ -76,8 +76,9 @@ For example
     &cos{\alpha} = (0.990 \pm 0.002)
 \end{align*}`
 will render as 
-$$\begin{align*} &2A_{0}=(11.0 \pm 0.1) \ \text{cm} \\ &L_{0,max}=(79.6 \pm 0.1) \ \text{cm} \\ &cos{\alpha} = (0.990 \pm 0.002) \end{align*}$$
-
+```math
+\begin{align*} &2A_{0}=(11.0 \pm 0.1) \ \text{cm} \\ &L_{0,max}=(79.6 \pm 0.1) \ \text{cm} \\ &cos{\alpha} = (0.990 \pm 0.002) \end{align*}
+```
 
 **The Cauchy-Schwarz Inequality**
 $$\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)$$
