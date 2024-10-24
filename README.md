@@ -18,16 +18,21 @@ This is the list of main files:
 
 ### Git usage
 
+### Inital Git setup
+Once installed set your username and email
+
+`git config --global user.name [your username]`
+
+`git config --global user.email [your email]`
+
 #### Repo initial download
 `git clone https://github.com/mmeneg/corda_vibrante.git` 
 create a new directory named after the project, used once to download the initial content.
-
 **Note:** all the command must be executed in the root directory created by Git.
 
 #### Work routine
 `git pull origin` 
 pull and merge all the changes occured since your last commit
-
 **Remember:** use this command before each and every time you start working on files
 
 `git add .` 
@@ -44,7 +49,6 @@ In the root directory there's a file called .gitignore, this file include all th
 that fill be ignored by Git. 
 This included all working file for Visual Studio and Sublime Text IDEs, all working files and pdf output
 from LaTex compilations.
-
 **Note:** please do not modify this file (unless you know what you are doing)
 
 ### Latex usage
@@ -52,7 +56,6 @@ from LaTex compilations.
 `pdflatex [filename].tex` 
 this command will compile [filename].tex and output [filename].pdf. 
 You can also use the Build command of your IDE on the file (that usually run such command for you in the background)
-
 **Remember:** you have to build/compile only the main document (e.g. e_m.tex)
 
 #### Structure
