@@ -32,7 +32,8 @@ create a new directory named after the project, used once to download the initia
 
 #### Work routine
 `git pull origin` 
-pull and merge all the changes occured since your last commit
+pull and merge all the changes occured since your last commit, *origin* is the name of 
+the remote repository and it was automatically created when you cloned the remote repo.
 **Remember:** use this command before each and every time you start working on files
 
 `git add .` 
@@ -43,6 +44,18 @@ commit changes locally, please add a meaningful comment such as "Linear regressi
 
 `git push origin main` 
 push your changes to the remote central repository
+
+#### Conflicts
+It may happen that someone pushed changes to the remote repository while you have worked locally 
+on your computer (committed the changes locally) and now want to push such changes to the remote 
+repository.
+`git fetch origin` 
+download the content from the remote repository without merging
+`git merge origin/main` 
+create a new snapshot (and commit) that merge the remote repository with your local copy 
+`git push origin main` 
+push the new merged version to the remote central repository
+**Note:** this also apply if you forget to initially pull the content from the remote repository
 
 #### Git ignore
 In the root directory there's a file called .gitignore, this file include all the files and directory 
