@@ -9,8 +9,8 @@ which point to all the child files (that represent the sections in the main docu
 you have to work on your assigned child file.
 This is the list of main files:
 - e/m ratio:
-	-- directory: e_m
-	-- main: e_m.tex
+	- directory: e_m
+	- main: e_m.tex
 
 ## How to contribute
 
