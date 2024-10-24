@@ -18,7 +18,7 @@ This is the list of main files:
 
 ### Git usage
 
-### Inital Git setup
+#### Inital Git setup
 Once installed set your username and email
 
 `git config --global user.name [your username]`
