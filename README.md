@@ -49,10 +49,13 @@ push your changes to the remote central repository
 It may happen that someone pushed changes to the remote repository while you have worked locally 
 on your computer (committed the changes locally) and now want to push such changes to the remote 
 repository.
+
 `git fetch origin` 
 download the content from the remote repository without merging
+
 `git merge origin/main` 
-create a new snapshot (and commit) that merge the remote repository with your local copy 
+create a new snapshot (and commit) that merge the remote repository with your local copy
+
 `git push origin main` 
 push the new merged version to the remote central repository
 **Note:** this also apply if you forget to initially pull the content from the remote repository
