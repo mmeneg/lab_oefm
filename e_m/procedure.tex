@@ -7,13 +7,44 @@
 \subsection{Charge to mass ratio of the electron}
 The intitial setup is realized by connecting the following components:
 \begin{itemize}
-	\item Helmholtz coil to direct current (DC) power source that induce current intensity $I$;
+	\item Helmholtz coils to direct current (DC) power source that induce current intensity $I$;
 	\item capacitor plates to direct current (DC) power source that induce a voltage $\Delta V$;
 	\item filament that produce electrons to alternate current (AC) power source.
 \end{itemize}
 
-The measurement of $I$ and $\Delta V$ is performed by a pair of digital multimeter connected 
+The measurement of $I$ and $\Delta V$ are performed by a pair of digital multimeter connected 
 respectively in series and in parallel of their circuits.
+
+The measure of the distance between the two Helmholtz coils is done with a slide gauge, by taken 
+the internal distance $d_{\text{int}}$ and external distance $d_{\text{ext}}$ between the coils.
+The distance between the two coils $R$ is calculated as:
+\[
+    d=\frac{(d_{\text{int}} + d_{\text{ext}})}{2}
+\]
+
+The following table represent the measures $d_{\text{int}}$, $d_{\text{ext}}$, and the calculate $d$:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccc}
+        \hline
+        Measure & $d_{\text{int}} \text{ (cm)}$ & $d_{\text{ext}} \text{ (cm)}$ & $d$ \text{ (cm)}\\
+        \hline
+        1   &   13.260& 17.740&   15.500\\
+        2   &   13.342& 17.786&   15.564\\
+        3   &   13.310& 17.780&   15.545\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{External and internal distance between Helmholtz coils}
+\end{table}
+
+Since the configuration of the Helmholtz coils is such that the distance between the Helmholtz coils $d$is 
+the radius of the coils $R_b$.
+
+The value of the radius $R_b$ is the average of the calculated radius:
+\[
+    R_b=15.536 \pm 0.268 \ \text{cm}
+\]
 
 \subsubsection{Equipment orthogonal to Earth's magnetic field}
 %In this experience the equipment is placed orthogonal to the Earth's magnetic field, 
@@ -21,14 +52,121 @@ respectively in series and in parallel of their circuits.
 %of the magnetic field produced by the pair of Helmholtz coil is orthogonal to the Earth's magnetic field. 
 The implementation of this configuration in the experience is qualitative, 
 meaning that the direction of the Eart's magnetic field is approximately established 
-and the equipment is placed according.
-This approximation increase the expected systematic error introduced by the horizontal component of 
-the Earth's magnetic field.
+and the equipment is placed accordingly.
 
+A certain voltage $\Delta V$ is set on the capacitor plates (measured by digital multimeter in parallel), then a proper current intensity $I$ (measured by a digital multimeter in series)
+is set on the Helmholtz coils to change the value of the magnetic field $B_z$, this modify 
+the trajectory of the electrons in a way the the shape of the electrons beam is a circle.
 
+The measure of the diameter of the circle is performed by placing a pair of sliders that can freely move 
+on a rail that cross the center of the circle.
+A slide gauge is used to measure the distance between the sliders $D$, two measures $D_1$ and $D_2$ are performed for each configuration of $\Delta V$ and $I$.
+
+The following table represent the two measures of the distance bewteen the sliders $D_1$, $D_2$, the radius of the circle $R$ calcualted as $R=D/2$ where $D$ is the semisum of the distances $D=(D_1 + D_2)/2$, and the related value of $\Delta V$ and $I$. 
+%This approximation increase the expected systematic error introduced by the horizontal component of 
+%the Earth's magnetic field.
+
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccccc}
+        \hline
+        Measure & $I \text{ (A)}$ & $\Delta V \text{ (V)}$ & $D_1 \text{ (cm)}$ & $D_2 \text{ (cm)}$ & $R \text{ (cm)}$\\
+        \hline
+        1   &   1.133&   162.5&   9.374&   9.190& 4.641\\
+        2   &   1.187&   176.8&   9.120&   9.200& 4.580\\
+        3   &   1.160&   195.5&  10.170&  10.100& 5.068\\
+        4   &   1.375&   213.8&   9.044&   9.048& 4.523\\
+        5   &   1.307&   224.5&   9.780&   9.778& 4.890\\
+        6   &   1.554&   242.2&   8.550&   8.580& 4.283\\
+        7   &   1.522&   257.8&   9.072&   9.040& 4.528\\
+        8   &   1.607&   274.8&   8.980&   9.010& 4.498\\
+        9   &   1.740&   295.9&   8.520&   8.522& 4.261\\
+        10  &   1.240&   200.0&   9.550&   9.560& 4.778\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Orthogonal configuration - Measure of electrons beam diameter for each configuration, and related radius}
+\end{table}
 
 \subsubsection{Equipment parallel to Earth's magnetic field}
+The equipment is then rotated by $90^{\circ}$ and used the same procedure as previously explained.
+
+The following table shows the measures and the calculated radius $R$
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccccc}
+        \hline
+        Measure & $I \text{ (A)}$ & $\Delta V \text{ (V)}$ & $D_1 \text{ (cm)}$ & $D_2 \text{ (cm)}$ & $R \text{ (cm)}$\\
+        \hline
+        1   &   1.133&   149.2&   8.510&   8.450& 4.240\\
+        2   &   1.367&   166.7&   7.790&   7.770& 3.890\\
+        3   &   1.293&   179.4&   8.680&   8.650& 4.333\\
+        4   &   1.428&   193.1&   8.290&   8.320& 4.153\\
+        5   &   1.532&   209.0&   7.940&   7.944& 3.971\\
+        6   &   1.552&   226.1&   8.360&   8.362& 4.181\\
+        7   &   1.657&   240.8&   8.010&   8.000& 4.003\\
+        8   &   1.353&   257.7&  10.292&  10.260& 5.138\\
+        9   &   1.328&   272.6&  10.790&  10.800& 5.398\\
+        10  &   1.372&   292.2&  10.608&  10.620& 5.307\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Parallel configuration - Measure of electrons beam diameter for each configuration, and related radius}
+\end{table}
+
 
 \subsubsection{Equipment counter parallel to Earth's magnetic field}
+The equipment is then rotated by $-180^{\circ}$ and used the same procedure as previously explained.
+
+The following table shows the measures and the calculated radius $R$:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccccc}
+        \hline
+        Measure & $I \text{ (A)}$ & $\Delta V \text{ (V)}$ & $D_1 \text{ (cm)}$ & $D_2 \text{ (cm)}$ & $R \text{ (cm)}$\\
+        \hline
+        1   &   0.811&   151.6&  11.280&  11.300& 5.645\\
+        2   &   0.881&   181.2&  12.290&  12.400& 6.173\\
+        3   &   1.038&   212.6&  11.650&  11.620& 5.818\\
+        4   &   1.151&   242.6&  10.280&  10.190& 5.118\\
+        5   &   1.289&   272.7&  10.480&  10.470& 5.238\\
+        6   &   1.302&   296.9&  11.130&  11.111& 5.560\\
+        7   &   1.204&   259.4&  11.350&  11.200& 5.638\\
+        8   &   1.136&   228.2&  10.980&  10.990& 5.493\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Antiparallel configuration - Measure of electrons beam diameter for each configuration, and related radius}
+\end{table}
+
 
 \subsection{Horizontal component's intensity of Earth's magnetic field}
+The intitial setup is realized by connecting the Helmholtz coils to direct current (DC) power source that induce current intensity $I$.
+The measurement of $I$ is performed by a pair of digital multimeter connected in series.
+A switch is used to revert the flow of the current to the Helmholtz coils, this simplify the measurement of negative 
+angle deflections.
+
+The current $I$ is changed to obtain a certain deflection $\theta $ of the magnetic needle from the rest position.
+
+The following table shows the measurement of $\theta$ respect to $I$
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{ccc}
+        \hline
+        Measure & $I \text{ (mA)}$ & $\theta \text{ (} \circ \text{)}$ \\
+        \hline
+        1   &    14.33&    45\\
+        2   &    15.76&   -45\\
+        3   &    17.30&    50\\
+        4   &    20.20&   -50\\
+        5   &    21.38&    55\\
+        6   &    22.60&   -55\\
+        7   &    26.55&    60\\
+        8   &    26.29&   -60\\
+        9   &    34.98&    65\\
+        10  &    33.65&   -65\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Measure of magnetic needle deflection}
+\end{table}
