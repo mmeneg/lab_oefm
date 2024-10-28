@@ -376,7 +376,7 @@ S_y &= \sum_{n=1}^N \frac{y_n}{\sigma_n^2} & \quad S_{xy} &= \sum_{n=1}^N \frac{
 a &= \frac{S_{xy} S_w - S_x S_y}{\Delta} & \quad b &= \frac{S_x S_y - S_{xy} S_w}{\Delta} \\
 \sigma_a &= \sqrt{\frac{S_w}{\Delta}} & \quad \sigma_b &= \sqrt{\frac{S_{xx}}{\Delta}} 
 \end{align*}
-where  $\sigma_n$ is the uncertainty on $(B_zR)^2$ and $x_n$,  $y_n$ are the coordinates of each point.
+where  $\sigma_n$ is the uncertainty on $(B_zR)^2$, $x_n$ and  $y_n$ are the coordinates of each point, a is the slope of the line ($\frac{m}{e}$) and b is the y intercept.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
@@ -393,16 +393,16 @@ where  $\sigma_n$ is the uncertainty on $(B_zR)^2$ and $x_n$,  $y_n$ are the coo
         \addplot[scatter,only marks,scatter src=explicit symbolic] 
             table[meta=label] {
               x     y    xerror yerror    label
-            325     1.56   0     0.014      b
-            353.6	1.67   0     0.014      a
-            391	    1.96   0     0.014      a
-            427.6	2.19   0     0.014      a
-            449     2.31   0     0.014      a
-            484.4   2.51   0       0        a
-            515.6   2.69   0       0        a  
-            549.6   2.96   0       0        a
-            591.8   3.11   0       0        a
-            400     1.99   0       0        a
+            325     1.56   0.1     0.022      b
+            353.6	1.67   0.1     0.014      a
+            391	    1.96   0.1     0.014      a
+            427.6	2.19   0.1     0.014      a
+            449     2.31   0.1     0.014      a
+            484.4   2.51   0.1       0        a
+            515.6   2.69   0.1       0        a  
+            549.6   2.96   0.1       0        a
+            591.8   3.11   0.1       0        a
+            400     1.99   0.1       0        a
          
         };
         \addplot+[
@@ -411,17 +411,17 @@ where  $\sigma_n$ is the uncertainty on $(B_zR)^2$ and $x_n$,  $y_n$ are the coo
             x dir=both, x explicit,
             y dir=both, y explicit
         ] table[x=x, y=y, x error=xerror, y error=yerror] {
-               x     y    xerror yerror    label
-            325     1.56   0     0.014      b
-            353.6	1.67   0     0.014      a
-            391	    1.96   0     0.014      a
-            427.6	2.19   0     0.014      a
-            449     2.31   0     0.014      a
-            484.4   2.51   0       0        a
-            515.6   2.69   0       0        a  
-            549.6   2.96   0       0        a
-            591.8   3.11   0       0        a
-            400     1.99   0       0        a
+                x     y    xerror yerror    label
+            325     1.56   0.1     0.022      b
+            353.6	1.67   0.1     0.014      a
+            391	    1.96   0.1     0.014      a
+            427.6	2.19   0.1     0.014      a
+            449     2.31   0.1     0.014      a
+            484.4   2.51   0.1       0        a
+            515.6   2.69   0.1       0        a  
+            549.6   2.96   0.1       0        a
+            591.8   3.11   0.1       0        a
+            400     1.99   0.1       0        a
         };
         \addplot[
     domain=300:600,
@@ -430,7 +430,125 @@ where  $\sigma_n$ is the uncertainty on $(B_zR)^2$ and $x_n$,  $y_n$ are the coo
 ] {0.0059*x - 0.39};
     \end{axis}
     \end{tikzpicture}
-    \caption{Linear regression between for the orthogonal setup. }
-    \label{regressione aperto 2}
+    \caption{Linear regression between $(B_zR)^2$ and the voltage for the orthogonal setup. }
 \end{figure}
 
+%paralello
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}
+        [
+            xlabel={$2\Delta V$ (V)},
+            ylabel={$(B_zR)^2*10^{-5}$ ($T^2m^2$)},
+            grid=both,
+            scatter/classes={
+                a={mark=o,draw=black},
+                b={mark=o,draw=black,fill=black}
+            }
+        ]
+        \addplot[scatter,only marks,scatter src=explicit symbolic] 
+            table[meta=label] {
+              x     y    xerror yerror    label
+            298.4   1.30   0.1     0.022      b
+            333.4	1.60   0.1     0.014      a
+            358.8   1.77   0.1     0.014      a
+            386.2	1.99   0.1     0.014      a
+            418     2.09   0.1     0.014      a
+            452.2   2.38   0.1       0        a
+            481.6   2.49   0.1       0        a  
+            515.4   2.74   0.1       0        a
+            545.2   2.91   0.1       0        a
+            584.4   3.00   0.1       0        a
+         
+        };
+        \addplot+[
+            only marks,
+            error bars/.cd,
+            x dir=both, x explicit,
+            y dir=both, y explicit
+        ] table[x=x, y=y, x error=xerror, y error=yerror] {
+             x     y    xerror yerror    label
+            298.4   1.30   0.1     0.022      b
+            333.4	1.60   0.1     0.014      a
+            358.8   1.77   0.1     0.014      a
+            386.2	1.99   0.1     0.014      a
+            418     2.09   0.1     0.014      a
+            452.2   2.38   0.1       0        a
+            481.6   2.49   0.1       0        a  
+            515.4   2.74   0.1       0        a
+            545.2   2.91   0.1       0        a
+            584.4   3.00   0.1       0        a
+        };
+        \addplot[
+    domain=290:600,
+    samples=100,
+    color=black
+] {0.0060*x - 0.40};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Linear regression between $(B_zR)^2$ and the voltage for the parallel setup. }
+\end{figure}
+
+%antiparallelo
+
+\begin{figure}[H]
+    \centering
+    \begin{tikzpicture}
+        \begin{axis}
+        [
+            xlabel={$2\Delta V$ (V)},
+            ylabel={$(B_zR)^2*10^{-5}$ ($T^2m^2$)},
+            grid=both,
+            scatter/classes={
+                a={mark=o,draw=black},
+                b={mark=o,draw=black,fill=black}
+            }
+        ]
+        \addplot[scatter,only marks,scatter src=explicit symbolic] 
+            table[meta=label] {
+              x     y    xerror yerror    label
+            303.2   1.19   0.1     0.022      b
+            362.4	1.67   0.1     0.014      a
+            425.2   2.06   0.1     0.014      a
+            485.2	1.96   0.1     0.014      a
+            545.4   2.58   0.1     0.014      a
+            593.8   2.97   0.1       0        a
+            518.8   2.61   0.1       0        a  
+            456.4   2.20   0.1       0        a
+        };
+        \addplot+[
+            only marks,
+            error bars/.cd,
+            x dir=both, x explicit,
+            y dir=both, y explicit
+        ] table[x=x, y=y, x error=xerror, y error=yerror] {
+               x     y    xerror yerror    label
+            303.2   1.19   0.1     0.022      b
+            362.4	1.67   0.1     0.014      a
+            425.2   2.06   0.1     0.014      a
+            485.2	1.96   0.1     0.014      a
+            545.4   2.58   0.1     0.014      a
+            593.8   2.97   0.1       0        a
+            518.8   2.61   0.1       0        a  
+            456.4   2.20   0.1       0        a
+        };
+        \addplot[
+    domain=290:600,
+    samples=100,
+    color=black
+] {0.0059*x - 0.58};
+    \end{axis}
+    \end{tikzpicture}
+    \caption{Linear regression between $(B_zR)^2$ and the voltage for the antiparallel setup.}
+\end{figure}
+The final values were found to be:
+\begin{align*}
+    &\frac{e}{m}=(1.67\pm0.01)\, \mathrm{C/Kg}\,\, (Orthogonal)\\
+    &\frac{e}{m}=(1.66\pm0.01)\, \mathrm{C/Kg}\,\, (Parallel)\\
+    &\frac{e}{m}=(1.68\pm0.01)\, \mathrm{C/Kg}\,\, (Antiparallel)\\
+\end{align*}
+which doesn't correlates with the accepted value of:
+\begin{equation*}
+    \frac{e}{m}=1.76\,\,\, \mathrm{C/Kg}
+\end{equation*}
