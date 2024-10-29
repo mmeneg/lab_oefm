@@ -552,3 +552,68 @@ which doesn't correlates with the accepted value of:
 \begin{equation*}
     \frac{e}{m}=1.76\,\,\, \mathrm{C/Kg}
 \end{equation*}
+
+\subsection{Horizontal component's intensity of Earth's magnetic field}
+For each fixed angle $\theta$ we measured the intensity I two times (clockwise $I_c$ and counter-clockwise $I_{cc}$) and took their mean as the final value:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$I_c$ (mA) & $I_{cc}$ (mA) & Mean I (mA) & $\theta$ \\ \hline
+14.33 & 15.76 & 15.05 & 45  \\ \hline
+17.30 & 20.20 & 18.75 & 50  \\ \hline
+21.38 & 22.60 & 21.99 & 55  \\ \hline
+26.55 & 26.29 & 26.42 & 60  \\ \hline
+34.98 & 33.65 & 34.32 & 65  \\ \hline
+\end{tabular}
+\end{table}
+The uncertainty on the intensity is the last digit provide by the device ($\pm 0.01$ mA) while the one on the angle is the protractor's resolution ($\pm 1^{\circ}$).
+The coil magnetic field's components are tabulated for fixed $\theta$ and needle lenght R:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+$B_z$ (mT) & $B_r$ (mT)\\ \hline
+0.15438 & 0.00228 \\ \hline
+0.15471 & 0.00167 \\ \hline
+0.15480 & 0.00110 \\ \hline
+0.15472 & 0.00062 \\ \hline
+0.15450 & 0.00025 \\ \hline
+\end{tabular}
+\caption{Tabulated values for the orthogonal ($B_z$) and parallel ($B_r$) coil magnetic field's components.}
+\end{table}
+
+We can now calculate the Horizontal component of Earth's magnetic fiels ($B_t$) as:
+\begin{equation*}
+    B_t=\frac{I}{I_0}(B_z \cot{(\theta)}+B_r)
+\end{equation*}
+where $I_0=(100\pm 1)$ mA is the intensity of the coil current power source, and calculated its uncertainty:
+\begin{align*}
+    &\sigma_{B_t}^2 = \left( \frac{1}{I_0} \left( B_z \cot(\theta) + B_r \right) \sigma_I \right)^2 + \left( -\frac{I}{I_0^2} \left( B_z \cot(\theta) + B_r \right) \sigma_{I_0} \right)^2 + \left( \frac{I}{I_0} \cot(\theta) \sigma_{B_z} \right)^2 \\
+    &+ \left( \frac{I}{I_0} B_z \left( -\csc^2(\theta) \right) \sigma_\theta \right)^2 + \left( \frac{I}{I_0} \sigma_{B_r} \right)^2
+\end{align*}
+Its values for each measurement are shown below:
+\begin{table}[H]
+\centering
+\begin{tabular}{|c|c|}
+\hline
+$B_t$ ($\mu$T) & $\sigma_{B_z}$ ($\mu$T) \\
+\hline
+23.57 & 1.40 \\
+\hline
+24.65 & 2.11 \\
+\hline
+24.08 & 1.13 \\
+\hline
+23.76 & 0.99 \\
+\hline
+24.81 & 1.25 \\
+\hline
+\end{tabular}
+\end{table}
+We lastly calculated the final value as the weighted arithmetic mean of these values finding:
+\begin{equation*}
+    B_{tf}=(24.08\pm0.56)\,\, \mu\mathrm{T}
+\end{equation*}
+% é giusto? Chatgpt mi fa che il campo magnetico orrizontale varia da 20 a 40 microtesla, su internet più o meno anche.
+
