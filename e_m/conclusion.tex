@@ -1,39 +1,60 @@
-\begin{figure}[H]
-    \centering
-    \begin{tikzpicture}
-        \begin{axis}[
-            xlabel={$\frac{e}{m}$ (C/kg)},
-            ylabel={},
-            grid=both,
-            scatter/classes={
-                a={mark=o,draw=black},
-                b={draw=black,fill=black}
-            }
-        ]
-        \addplot[scatter,only marks,scatter src=explicit symbolic] 
-            table[meta=label] {
-            x     y     xerror yerror label
-        1.69   100    0.01    0      a
-        1.66    200   0.01    0      a
-        1.67   300    0.16    0      a
-        1.76    400     0    0       b
-        };
-        \addplot+[
-            only marks,
-            error bars/.cd,
-            x dir=both, x explicit,
-            y dir=both, y explicit
-        ] table[x=x, y=y, x error=xerror, y error=yerror] {
-              x     y     xerror yerror label
-        1.69   100    0.01    0      a
-        1.66    200   0.01    0      a
-        1.67   300    0.16    0      b
-        1.76    400     0    0      b
-        };
-        \end{axis}
-    \end{tikzpicture}
-    \caption{Values of e/m compared with the theoretical value in black. }
-    \label{grafico velocità}
-    \end{figure}
+The $e/m$ ratio calculated during the lab in the configuration orthogonal and parallel respect to the Earth's magnetic field are not compatible with the accepted value, while ratio calculated in the anti parallel setup is compatible with the accepted value.
+
+\begin{align*}
+    &\frac{e}{m}=(1.69\pm0.01)\, \mathrm{C/kg}\,\, \text{(Orthogonal)}\\
+    &\frac{e}{m}=(1.66\pm0.01)\, \mathrm{C/kg}\,\, \text{(Parallel)}\\
+    &\frac{e}{m}=(1.67\pm0.16)\, \mathrm{C/kg}\,\, \text{(Antiparallel)}\\
+    &\frac{e}{m}=1.76\,\,\, \mathrm{C/kg}\,\, \text{(Accepted value)}\\
+\end{align*}
+
+We have identified the followings as possible causes of such discrepancy, all related to the measure of the electrons beam diameter:
+\begin{itemize}
+    \item electron's beam circle too small related to the geometry of the equipment (until measure \#8 of the Parallel configuration): this could have caused a behaviour that was not compatible with the theorical model
+    \item systematic error in the measure of the electron's beam diameter: once placed the sliders on the rail to fix the ends of the circle, the procedure to measure the distance between sliders was to fix the left side slider with a finger while extending the slide gauge till the other slider without touching it. This could led to an overall underestimation of the diameters
+    \item learning curve during the measures
+\end{itemize}
+
+The value calculated for the horizontal component of the Earth's magnetic field is compatible with the accepted value:
+\begin{align*}
+    &B_{tf}=(24.08\pm0.56)\,\, \mu\mathrm{T}\,\, \text{(Measured value)}\\
+    &B_t=(30 \pm 10)\,\, \mu\mathrm{T}\,\, \text{(Accepted value)}\\
+\end{align*}
+%\begin{figure}[H]
+%    \centering
+%    \begin{tikzpicture}
+%        \begin{axis}[
+%            xlabel={$\frac{e}{m}$ (C/kg)},
+%            ylabel={},
+%            grid=both,
+%            scatter/classes={
+%                a={mark=o,draw=black},
+%                b={draw=black,fill=black}
+%            }
+%        ]
+%        \addplot[scatter,only marks,scatter src=explicit symbolic] 
+%            table[meta=label] {
+%            x     y     xerror yerror label
+%        1.69   100    0.01    0      a
+%        1.66    200   0.01    0      a
+%        1.67   300    0.16    0      a
+%        1.76    400     0    0       b
+%        };
+%        \addplot+[
+%            only marks,
+%            error bars/.cd,
+%            x dir=both, x explicit,
+%            y dir=both, y explicit
+%        ] table[x=x, y=y, x error=xerror, y error=yerror] {
+%              x     y     xerror yerror label
+%        1.69   100    0.01    0      a
+%        1.66    200   0.01    0      a
+%        1.67   300    0.16    0      b
+%        1.76    400     0    0      b
+%        };
+%        \end{axis}
+%    \end{tikzpicture}
+%    \caption{Values of e/m compared with the theoretical value in black. }
+%    \label{grafico velocità}
+%    \end{figure}
     
     
