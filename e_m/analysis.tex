@@ -70,294 +70,141 @@
 \numberwithin{figure}{section}
 \subsection{Charge to mass ratio of the electron}
 %The coil magnetic field is generated at its centre, as such, 
-We found the radius of the coil as the sum of the distance between their outer parts $x_o$ , and their inner distance $x_i$ all divided by 2. We took three measures  and use their arithmetic mean as the final value $x_f=(15.536\pm 0.015)$ cm. Their values, in centimetres, are shown below:
+%We found the radius of the coil as the sum of the distance between their outer parts $d_{\text{ext}}$ , and their inner distance $d_{\text{int}}$ all divided by 2. We took three measures and use their arithmetic mean as the final value
+%and use their arithmetic mean as the final value $x_f=(15.536\pm 0.015)$ cm. Their values, in centimetres, are shown below:
+%\begin{table}[h!]
+%    \centering
+%        \begin{tabular}{|c|c|c|}
+%            \hline
+%            \textbf{$X_o$} & \textbf{$X_i$} & \textbf{$X_r$} \\
+%            \hline
+%            17.740 & 13.260 & 15.500 \\
+%            \hline
+%            17.786 & 13.342 & 15.564 \\
+%            \hline
+%            17.780 & 13.310 & 15.545 \\
+%            \hline
+%        \end{tabular} 
+%\end{table}
+%where $x_r$ is the radius of the coil.  
+The measure of the distance between the two Helmholtz coils is done with a slide gauge, by taken 
+the internal distance $d_{\text{int}}$ and external distance $d_{\text{ext}}$ between the coils.
+The distance between the two coils in each set of measure $d$ is calculated as the semi sum of the distances. 
 
-\begin{table}[h!]
-    \centering
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \textbf{$X_o$} & \textbf{$X_i$} & \textbf{$X_r$} \\
-            \hline
-            17.740 & 13.260 & 15.500 \\
-            \hline
-            17.786 & 13.342 & 15.564 \\
-            \hline
-            17.780 & 13.310 & 15.545 \\
-            \hline
-        \end{tabular} 
+The following table represent the measures $d_{\text{int}}$, $d_{\text{ext}}$, and the calculate $d$:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccc}
+        \hline
+        Measure & $d_{\text{int}} \text{ (cm)}$ & $d_{\text{ext}} \text{ (cm)}$ & $d \text{ (cm)}$\\
+        \hline
+        1   &   13.260& 17.740&   15.500\\
+        2   &   13.342& 17.786&   15.564\\
+        3   &   13.310& 17.780&   15.545\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{External and internal distance between Helmholtz coils}
 \end{table}
-where $x_r$ is the radius of the coil.  
-We took the resolution of the nonius ($\pm 0.001$ cm) as the uncertainty on our measures; the one on the mean was calculated as the standard error of the mean:
+
+Given the three set of measures the distance between the coils $\bar{d}$, is calculated as the arithmetic mean of each  calculated distance, while the error $\sigma_{\bar{d}}$ is calculated as the standard error of the mean.
 \begin{equation*}
-    \sigma_{x_f}=\frac{\sigma}{\sqrt{n}}
+    \sigma_{\bar{d}}=\frac{\sigma_d}{\sqrt{N}}
 \end{equation*}
-where $\sigma$ is the standard deviation and n the number of measures.
-We measured the diameter of the deflected beam of electrons with the same nonius. we took two measures for each case. The values for all configurations are shown in the tables below:
-\begin{table}[H]
-    \centering
-        % Prima tabella
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \multicolumn{3}{|c|}{\textbf{Orthogonal}} \\
-            \hline
-            \textbf{$D_1$} & \textbf{$D_2$} & Semisum \\
-            \hline
-            9.374 & 9.190 & 9.282 \\
-            \hline
-            9.120 & 9.200 & 9.160 \\
-            \hline
-            10.170 & 10.100 & 10.135 \\
-            \hline
-             9.048 & 9.044 & 9.046 \\
-            \hline
-            9.780 & 9.778 & 9.779 \\
-            \hline
-            8.550 & 8.580 & 8.565 \\
-            \hline
-             9.072 & 9.040 & 9.056 \\
-            \hline
-            8.980 & 9.010 & 8.995 \\
-            \hline
-            8.520 & 8.522 & 8.521 \\
-            \hline
-            9.550 & 9.560 & 9.555 \\
-            \hline
-        \end{tabular}
-        \vspace{1cm}
-        % Seconda tabella
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \multicolumn{3}{|c|}{\textbf{Parallel}} \\
-            \hline
-            \textbf{$D_1$} & \textbf{$D_2$} & Semisum \\
-            \hline
-            8.510 & 8.450 & 8.480 \\
-            \hline
-            7.790 & 7.770 & 7.780 \\
-            \hline
-            8.680 & 8.650 & 8.665 \\
-            \hline
-             8.290 & 8.320 & 8.305 \\
-            \hline
-            7.940 & 7.944 & 7.942 \\
-            \hline
-            8.360 & 8.362 & 8.361 \\
-            \hline
-             8.010 & 8.000 & 8.005 \\
-            \hline
-            10.292 & 10.260 & 10.276 \\
-            \hline
-            10.790 & 10.800 & 10.795 \\
-            \hline
-            10.608 & 10.620 & 10.614 \\
-            \hline
-        \end{tabular}
-        \vspace{1cm}
-        % Terza tabella
-        \begin{tabular}{|c|c|c|}
-            \hline
-            \multicolumn{3}{|c|}{\textbf{Antiparallel}} \\
-            \hline
-            \textbf{$D_1$} & \textbf{$D_2$} & Semisum \\
-            \hline
-            11.280 & 11.300 & 11.290 \\
-            \hline
-            12.290 & 12.400 & 12.345 \\
-            \hline
-            11.650 & 11.620 & 11.635 \\
-            \hline
-             10.280 & 10.190 & 10.235 \\
-            \hline
-            10.480 & 10.470 & 10.475 \\
-            \hline
-            11.120 & 11.110 & 11.120 \\
-            \hline
-             11.350 & 11.200 & 11.275 \\
-            \hline
-            10.980 & 10.990 & 10.985 \\
-            \hline
-        \end{tabular}
-    \caption{Values of the diameter, in centimetres, for given voltage and current intensity.}
-\end{table}
-The respective values of current intensity and voltage for each measurement are contained in the following tables:
-\begin{table}[H]
-\centering
-\begin{tabular}{ccc}
-\begin{tabular}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\textbf{Orthogonal}} \\
-\hline
-I (A) & $\Delta$ V (V) \\
-\hline
-1.133 & 162.5 \\
-\hline
-1.187 & 176.8 \\
-\hline
-1.16 & 195.5 \\
-\hline
-1.375 & 213.8 \\
-\hline
-1.307 & 224.5 \\
-\hline
-1.554 & 242.2 \\
-\hline
-1.522 & 257.8 \\
-\hline
-1.607 & 274.8 \\
-\hline
-1.74 & 295.9 \\
-\hline
-1.24 & 200 \\
-\hline
-\end{tabular}
-\begin{tabular}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\textbf{Parallel}} \\
-\hline
-I (A) & $\Delta$ V (V) \\
-\hline
-1.133 & 149.2 \\
-\hline
-1.367 & 166.7 \\
-\hline
-1.293 & 179.4 \\
-\hline
-1.428 & 193.1 \\
-\hline
-1.532 & 209.0 \\
-\hline
-1.552 & 226.1 \\
-\hline
-1.657 & 240.8 \\
-\hline
-1.353 & 257.7 \\
-\hline
-1.328 & 272.6 \\
-\hline
-1.372 & 292.2 \\
-\hline
+where $\sigma_d$ is the standard deviation and $N$ the number of measures.
 
-\end{tabular}
-\begin{tabular}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\textbf{Antiparallel}}\\
-\hline
-I (A) & $\Delta$ V (V) \\
-\hline
-0.811 & 151.6 \\
-\hline
-0.881 & 181.2 \\
-\hline
-1.038 & 212.6 \\
-\hline
-1.151 & 242.6 \\
-\hline
-1.289 & 272.7 \\
-\hline
-1.302 & 296.9 \\
-\hline
-1.204 & 259.4 \\
-\hline
-1.136 & 228.2 \\
-\hline
-\end{tabular}
-\end{tabular}
-\caption{Intensity and voltage for each measurement}
-\end{table}
-We took the last digit provided by the devices as the uncertainty on the intensity ($\pm 0.001$ A)  and voltage ($\pm 0.1$ V).
-As for the radius we took the semi-sum as the final value, and the difference between the two measures divided by two as the uncertainty.
-\begin{table}[H]
-\centering
-\begin{tabular}{ccc}
-\begin{tabular}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\textbf{Orthogonal}} \\
-\hline
-R (cm) & $\sigma_R$ (cm) \\
-\hline
-4.641 & 0.046 \\
-\hline
-4.580 & 0.020 \\
-\hline
-5.068 & 0.017 \\
-\hline
-4.523 & 0.001 \\
-\hline
-4.890 & 0.001 \\
-\hline
-4.283 & 0.007 \\
-\hline
-4.526 & 0.008 \\
-\hline
-4.498 & 0.007 \\
-\hline
-4.261 & 0.001 \\
-\hline
-4.778 & 0.003 \\
-\hline
-\end{tabular}
-\begin{tabular}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\textbf{Parallel}} \\
-\hline
-R (cm) & $\sigma_R$ (cm) \\
-\hline
-4.240 & 0.015 \\
-\hline
-3.890 & 0.005 \\
-\hline
-4.332 & 0.008 \\
-\hline
-4.152 & 0.008 \\
-\hline
-3.971 & 0.010 \\
-\hline
-4.181 & 0.001 \\
-\hline
-4.003 & 0.003 \\
-\hline
-5.138 & 0.008 \\
-\hline
-5.398 & 0.003 \\
-\hline
-5.307 & 0.003 \\
-\hline
+Since the configuration of the equipment is such that the distance between the Helmholtz coils is equal to the radius of the coils $R_b$:
+\[
+    R_b=15.536 \pm 0.268 \ \text{cm}
+\]
 
-\end{tabular}
-\begin{tabular}{|c|c|}
-\hline
-\multicolumn{2}{|c|}{\textbf{Antiparallel}}\\
-\hline
-R (cm) & $\sigma_R$ (cm) \\
-\hline
-5.645 & 0.005 \\
-\hline
-6.176 & 0.028 \\
-\hline
-5.818 & 0.008 \\
-\hline
-5.118 & 0.023 \\
-\hline
-5.238 & 0.003 \\
-\hline
-5.560 & 0.005 \\
-\hline
-5.638 & 0.038 \\
-\hline
-5.493 & 0.003 \\
-\hline
-\end{tabular}
-\end{tabular}
-\caption{Radius of the electrons beam}
+
+%We took the resolution of the nonius ($\pm 0.002$ cm) as the uncertainty on our measures; the one on the mean was $calculated as the standard error of the mean:
+%\begin{equation*}
+%    \sigma_{x_f}=\frac{\sigma}{\sqrt{n}}
+%\end{equation*}
+%where $\sigma$ is the standard deviation and n the number of measures.
+
+Voltage $\Delta V$ and current intensity $I$ are measured with digital multimeters respectively with resolution of $\pm 0.1 \text{ V}$ and $\pm 0.001 \text{ A}$.
+The diameter of the deflected beam of electrons is measured using a slide gauge with a resolution of $\pm 0.002 \text{ cm}$.
+For each set we took two measures $D_1$ and $D_2$ as the distance between a pair a sliders which represent the diameter of the circle, and calculated the radius of the circle $R$ as the semi sum divided by two and the error of the radius $\sigma_R$ as the semi difference divided by two.
+
+The following table shows the measure and electrons beam radius in orthogonal configuration:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{ccccccc}
+        \hline
+        Measure & $I \text{ (A)}$ & $\Delta V \text{ (V)}$ & $D_1 \text{ (cm)}$ & $D_2 \text{ (cm)}$ & $R \text{ (cm)}$ & $\sigma_R \text{ (cm)}$ \\
+       \hline
+       1   &   1.133&   162.5&   9.374&   9.190& 4.641 & 0.046\\
+       2   &   1.187&   176.8&   9.120&   9.200& 4.580 & 0.020\\
+       3   &   1.160&   195.5&  10.170&  10.100& 5.068 & 0.017\\
+       4   &   1.375&   213.8&   9.044&   9.048& 4.523 & 0.001\\
+       5   &   1.307&   224.5&   9.780&   9.778& 4.890 & 0.001\\
+       6   &   1.554&   242.2&   8.550&   8.580& 4.283 & 0.007\\
+       7   &   1.522&   257.8&   9.072&   9.040& 4.528 & 0.008\\
+       8   &   1.607&   274.8&   8.980&   9.010& 4.498 & 0.007\\
+       9   &   1.740&   295.9&   8.520&   8.522& 4.261 & 0.001\\
+       10  &   1.240&   200.0&   9.550&   9.560& 4.778 & 0.003\\
+       \hline
+   \end{tabular}
+   \par}
+   \caption{Orthogonal configuration - Radius of the electron beam}
 \end{table}
 
-The coil magnetic field can be calculated using:
+The following table shows the measure and electrons beam radius in parallel configuration:
+
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{ccccccc}
+        \hline
+        Measure & $I \text{ (A)}$ & $\Delta V \text{ (V)}$ & $D_1 \text{ (cm)}$ & $D_2 \text{ (cm)}$ & $R \text{ (cm)}$ & $\sigma_R \text{ (cm)}$ \\
+        \hline
+        1   &   1.133&   149.2&   8.510&   8.450& 4.240&  0.015\\
+        2   &   1.367&   166.7&   7.790&   7.770& 3.890&  0.005\\
+        3   &   1.293&   179.4&   8.680&   8.650& 4.333&  0.008\\
+        4   &   1.428&   193.1&   8.290&   8.320& 4.153&  0.008\\
+        5   &   1.532&   209.0&   7.940&   7.944& 3.971&  0.010\\
+        6   &   1.552&   226.1&   8.360&   8.362& 4.181&  0.001\\
+        7   &   1.657&   240.8&   8.010&   8.000& 4.003&  0.003\\
+        8   &   1.353&   257.7&  10.292&  10.260& 5.138&  0.008\\
+        9   &   1.328&   272.6&  10.790&  10.800& 5.398&  0.003\\
+        10  &   1.372&   292.2&  10.608&  10.620& 5.307&  0.003\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Parallel configuration - Radius of the electron beam}
+\end{table}
+
+The following table shows the measure and electrons beam radius in antiparallel configuration:
+
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{ccccccc}
+        \hline
+        Measure & $I \text{ (A)}$ & $\Delta V \text{ (V)}$ & $D_1 \text{ (cm)}$ & $D_2 \text{ (cm)}$ & $R \text{ (cm)}$ & $\sigma_R \text{ (cm)}$ \\
+        \hline
+        1   &   0.811&   151.6&  11.280&  11.300& 5.645&  0.005\\
+        2   &   0.881&   181.2&  12.290&  12.400& 6.173&  0.028\\
+        3   &   1.038&   212.6&  11.650&  11.620& 5.818&  0.008\\
+        4   &   1.151&   242.6&  10.280&  10.190& 5.118&  0.023\\
+        5   &   1.289&   272.7&  10.480&  10.470& 5.238&  0.003\\
+        6   &   1.302&   296.9&  11.130&  11.111& 5.560&  0.005\\
+        7   &   1.204&   259.4&  11.350&  11.200& 5.638&  0.038\\
+        8   &   1.136&   228.2&  10.980&  10.990& 5.493&  0.003\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Antiparallel configuration - Radius of the electron beam}
+\end{table}
+
+The coil's magnetic field can be calculated using:
 \begin{equation*}
-    B_z=\mu_0\frac{8}{5\sqrt{5}}\frac{NI}{x_r}
+    B_z=\mu_0\frac{8}{5\sqrt{5}}\frac{NI}{R_b}
 \end{equation*}
-where $\mu_0$ is the vacuum magnetic permeability, N is the number of turns, I is the current intensity and $x_r$ is the coil radius. The uncertainty can be obtained through error propagation as:
+where $\mu_0$ is the vacuum magnetic permeability, N is the number of turns, I is the current intensity and $R_b$ is the coil radius. The uncertainty can be obtained through error propagation as:
 \begin{equation*}
-    \sigma_{B_z}=\sqrt{(\frac{\sigma_I}{I})^2+(\frac{\sigma_{x_r}}{x_r})^2}B_z
+    \sigma_{B_z}=B_z \sqrt{\left(\frac{\sigma_I}{I}\right)^2+\left(\frac{\sigma_{R_b}}{R_b}\right)^2}
 \end{equation*}
 With the magnetic field we can ultimately find the e/m ratio as:
 \begin{equation*}
@@ -370,7 +217,7 @@ S_y &= \sum_{n=1}^N \frac{y_n}{\sigma_n^2} & \quad S_{xy} &= \sum_{n=1}^N \frac{
 a &= \frac{S_{xy} S_w - S_x S_y}{\Delta} & \quad b &= \frac{S_x S_y - S_{xy} S_w}{\Delta} \\
 \sigma_a &= \sqrt{\frac{S_w}{\Delta}} & \quad \sigma_b &= \sqrt{\frac{S_{xx}}{\Delta}} 
 \end{align*}
-where  $\sigma_n$ is the uncertainty on $(B_zR)^2$, $x_n$ and  $y_n$ are the coordinates of each point, a is the slope of the line ($\frac{m}{e}$) and b is the y intercept.
+where  $\sigma_n$ is the uncertainty on $(B_zR)^2$, $x_n$ is $2 \Delta V$ and  $y_n$ is $(B_zR)^2$, $a$ is the ratio $\frac{m}{e}$ and b is the intercept on axis $y$.
 \begin{figure}[H]
     \centering
     \begin{tikzpicture}
@@ -536,55 +383,63 @@ where  $\sigma_n$ is the uncertainty on $(B_zR)^2$, $x_n$ and  $y_n$ are the coo
     \end{tikzpicture}
     \caption{Linear regression between $(B_zR)^2$ and the voltage for the antiparallel setup.}
 \end{figure}
-We can notice that the measure for the antiparallel setup are way more inaccurate, this has led to a higher uncertainty on respective the e/m value.
-The reduced chi squared for each configuration are:
+Note that the measure for the antiparallel setup have an higher error compared to others, this has led to a higher uncertainty on respective the e/m value.
+The reduced chi squared $\chi_{red}^2$ for each configuration are:
 \begin{align*}
     &\chi_{red}^2=10.5\,\,(Orthogonal)\\
     &\chi_{red}^2=55.7\,\,(Parallel)\\
     &\chi_{red}^2=0.32\,\,(Antiparallel)
 \end{align*}
-the reduced chi squared for the orthogonal and parallel setup are completely out of scale, this would mean that our measure are utterly flawed. As we discussed later in the conclusion we thinks that this problem derive for an underestimation of the uncertainty on the beam radius.
+the reduced chi squared for the orthogonal and parallel setup shows an incompatibilty of the model with the measures. As we discussed later in the conclusion we thinks that this problem could relate with a wrong setup during the measures.
 The final values were found to be:
 \begin{align*}
-    &\frac{e}{m}=(1.69\pm0.01)\, \mathrm{C/Kg}\,\, (Orthogonal)\\
-    &\frac{e}{m}=(1.66\pm0.01)\, \mathrm{C/Kg}\,\, (Parallel)\\
-    &\frac{e}{m}=(1.67\pm0.16)\, \mathrm{C/Kg}\,\, (Antiparallel)\\
+    &\frac{e}{m}=(1.69\pm0.01)\, \mathrm{C/kg}\,\, \text{(Orthogonal)}\\
+    &\frac{e}{m}=(1.66\pm0.01)\, \mathrm{C/kg}\,\, \text{(Parallel)}\\
+    &\frac{e}{m}=(1.67\pm0.16)\, \mathrm{C/kg}\,\, \text{(Antiparallel)}\\
 \end{align*}
-two of them doesn't correlates with the accepted value of:
+which does not correlate but antiparallel, with the accepted value of:
 \begin{equation*}
-    \frac{e}{m}=1.76\,\,\, \mathrm{C/Kg}
+    \frac{e}{m}=1.76\,\,\, \mathrm{C/kg}
 \end{equation*}
 
 
 
 \subsection{Horizontal component's intensity of Earth's magnetic field}
-For each fixed angle $\theta$ we measured the intensity I two times (clockwise $I_c$ and counter-clockwise $I_{cc}$) and took their mean as the final value:
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|c|c|c|}
-\hline
-$I_c$ (mA) & $I_{cc}$ (mA) & Mean I (mA) & $\theta$ \\ \hline
-14.33 & 15.76 & 15.05 & 45  \\ \hline
-17.30 & 20.20 & 18.75 & 50  \\ \hline
-21.38 & 22.60 & 21.99 & 55  \\ \hline
-26.55 & 26.29 & 26.42 & 60  \\ \hline
-34.98 & 33.65 & 34.32 & 65  \\ \hline
-\end{tabular}
+For each fixed angle $\theta$ we measured the intensity $I$ two times (clockwise $I_c$ and counter-clockwise $I_{cc}$) and took their mean as the final value:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccc}
+        \hline
+        $I_c \text{ (mA)}$ & $I_{cc} \text{ (mA)}$ &  $\bar{I} \text{ (mA)}$ & $\theta$ \\
+        \hline
+        14.33 & 15.76 & 15.05 & $45^{\circ}$  \\
+        17.30 & 20.20 & 18.75 & $50^{\circ}$  \\
+        21.38 & 22.60 & 21.99 & $55^{\circ}$  \\
+        26.55 & 26.29 & 26.42 & $60^{\circ}$  \\
+        34.98 & 33.65 & 34.32 & $65^{\circ}$  \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Earth's magnetic field - Measure of needle deflection clokwise and counter clockwise}
 \end{table}
-The uncertainty on the intensity is the last digit provide by the device ($\pm 0.01$ mA) while the one on the angle is the protractor's resolution ($\pm 1^{\circ}$).
-The coil magnetic field's components are tabulated for fixed $\theta$ and needle lenght R:
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-$B_z$ (mT) & $B_r$ (mT)\\ \hline
-0.15438 & 0.00228 \\ \hline
-0.15471 & 0.00167 \\ \hline
-0.15480 & 0.00110 \\ \hline
-0.15472 & 0.00062 \\ \hline
-0.15450 & 0.00025 \\ \hline
-\end{tabular}
-\caption{Tabulated values for the orthogonal ($B_z$) and parallel ($B_r$) coil magnetic field's components.}
+
+The uncertainty on the intensity is the last digit provide by the device ($\pm 0.01 \text{mA}$) while the one on the angle is the protractor's resolution ($\pm 1^{\circ}$).
+The coil magnetic field's components $B_z$ and $B_r$ are provided for fixed $\theta$ and needle lenght $R$:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cc}
+        \hline
+        $B_z$ (mT) & $B_r$ (mT) \\
+        \hline
+        0.15438 & 0.00228 \\
+        0.15471 & 0.00167 \\
+        0.15480 & 0.00110 \\
+        0.15472 & 0.00062 \\
+        0.15450 & 0.00025 \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Tabulated values for the orthogonal ($B_z$) and parallel ($B_r$) coil magnetic field's components.}
 \end{table}
 
 We can now calculate the Horizontal component of Earth's magnetic fiels ($B_t$) as:
@@ -597,24 +452,23 @@ where $I_0=(100\pm 1)$ mA is the intensity of the coil current power source, and
     &+ \left( \frac{I}{I_0} B_z \left( -\csc^2(\theta) \right) \sigma_\theta \right)^2 + \left( \frac{I}{I_0} \sigma_{B_r} \right)^2
 \end{align*}
 Its values for each measurement are shown below:
-\begin{table}[H]
-\centering
-\begin{tabular}{|c|c|}
-\hline
-$B_t$ ($\mu$T) & $\sigma_{B_z}$ ($\mu$T) \\
-\hline
-23.57 & 1.40 \\
-\hline
-24.65 & 2.11 \\
-\hline
-24.08 & 1.13 \\
-\hline
-23.76 & 0.99 \\
-\hline
-24.81 & 1.25 \\
-\hline
-\end{tabular}
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cc}
+        \hline
+        $B_t$ ($\mu$T) & $\sigma_{B_t}$ ($\mu$T) \\
+        \hline
+        23.57 & 1.40 \\
+        24.65 & 2.11 \\
+        24.08 & 1.13 \\
+        23.76 & 0.99 \\
+        24.81 & 1.25 \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Calculated value of $B_t$ for each deflection}
 \end{table}
+
 We lastly calculated the final value as the weighted arithmetic mean of these values finding:
 \begin{equation*}
     B_{tf}=(24.08\pm0.56)\,\, \mu\mathrm{T}
