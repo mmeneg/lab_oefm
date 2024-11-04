@@ -13,6 +13,12 @@ This is the list of main files:
 - e/m ratio:
 	- directory: e_m
 	- main: e_m.tex
+- Michelson interferometer:
+    - directory: Michelson
+    - main: Michelson.tex
+- Grating Spectrometer:
+    - directory: grating_spectrometer
+    - main: grating_spectrometer.tex
 
 ## How to contribute
 
