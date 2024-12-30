@@ -1,0 +1,57 @@
+%documentMetadata{}
+\documentclass[draft, a4paper,12pt]{article}
+
+\usepackage[italian]{babel}
+\usepackage{pgfplots}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{graphicx} %for the scheme
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
+\pgfplotsset{width=10cm,compat=1.9}
+
+\begin{document}
+
+\parskip=10pt plus 1pt
+\parindent=0pt
+
+\begin{center}
+    Universita' degli studi di Milano
+
+    Corso di Laurea in Fisica
+
+    \par{\Large{Laboratorio di Ottica, Elettromagnetismo e Fisica Moderna}}
+
+    Relatori: V. Malinouskaya, S. Pini, M. Meneghini
+
+    22 Dicembre 2024
+\end{center}
+
+\input{abstract}
+
+%Scopo e modalità (in breve) 
+%Descrivere sinteticamente ciò che ci si propone di fare 
+%nell'esperimento, ossia cosa si vuole misurare, verificare, provare… Cosa 
+%si dovrà misurare? Con che strumento? Potete inserire foto o schemi.
+\section{Obiettivi}
+\input{objective}
+
+%Raccolta dati misurati sotto forma di tabella ordinata
+%Presentare non solo i dati elaborati ma anche quelli grezzi
+%(questi ultimi, eventualmente, in appendice).
+%Presentare eventuali grafici con gli assi correttamente definiti (unità di 
+%misura, cifre significative, identificativo assi).
+\section{Procedura}
+\input{procedure}
+
+%Stima degli errori delle grandezze misurate (giustificare il metodo scelto)
+%Valore finale della grandezza da determinare ed incertezza
+%Ricordarsi di dare i valori con i rispettive errori e attenzione alle cifre significative! 
+\section{Analisi dei Dati}
+\input{analysis}
+
+%Confronto con i dati noti e valutazione di discrepanze.
+\section{Conclusioni}
+\input{conclusion}
+
+\end{document}
