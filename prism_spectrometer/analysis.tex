@@ -101,13 +101,15 @@ Di seguito e' riportata la misura dell'angolo $\theta_{\lambda}$ in corrisponden
     {\par\centering
     \begin{tabular}{ccc}
         \hline
-        $\lambda \text{(nm)}$ & $\theta_{\lambda} \text{ ($^{\circ}$)}$ & $\theta_{\lambda} \text{ ($^{\prime}$)}$ \\
+        $\lambda \text{(nm)}$ &
+        $\theta_{\lambda} \text{ ($^{\circ}$)}$ & 
+        $\theta_{\lambda} \text{ ($^{\prime}$)}$ \\
         \hline
         404.7   &   130 &   46.0\\
         496.0   &   127 &   42.0\\
         546.1   &   126 &   3.0\\
         577.0   &   125 &   13.0\\
-        NA   &   123 &   8.0\\
+        690.8   &   123 &   8.0\\
         \hline
     \end{tabular}
     \par}
@@ -128,13 +130,16 @@ Di seguito e' riportato il valore calcolato di $\delta_{min}$ e la sua incertezz
     {\par\centering
     \begin{tabular}{cccc}
         \hline
-        $\lambda \text{(nm)}$ & $\delta_{min} \text{ ($^{\circ}$)}$ & $\delta_{min} \text{ ($^{\prime}$)}$ & $\sigma_{delta} \text{ ($^{\prime}$)}$\\
+        $\lambda \text{(nm)}$ & 
+        $\delta_{min} \text{ ($^{\circ}$)}$ & 
+        $\delta_{min} \text{ ($^{\prime}$)}$ & 
+        $\sigma_{delta} \text{ ($^{\prime}$)}$\\
         \hline
         404.7   &   108 &   6.6  & 1.1\\
         496.0   &   111 &   10.6 & 1.1\\
         546.1   &   112 &   49.6 & 1.1\\
         577.0   &   113 &   39.6 & 1.1\\
-        NA   &   115 &   44.6 & 1.1\\
+        690.8   &   115 &   44.6 & 1.1\\
         \hline
     \end{tabular}
     \par}
@@ -148,11 +153,50 @@ Il valore di $\eta (\lambda)$ e' stato calcolato tramite la relazione:
 
 mentre l'errore $\sigma_{\eta}$ e' stato calcolato tramite la formula di propagazione degli errori, ovvero la relazione:
 \[
-    %\sigma_{\eta} = \sqrt{\left( \frac{1}{2 \sin^2{(\frac{\alpha}{2}})} \left( \cos{\left(\frac{\alpha+\sigma_{min}}{2} \right)}\sin{\left(\frac{\alpha}{2}\right)} - \sin{\left( \frac{\alpha+\sigma_{min}}{2} \right)}\cos{\left(\frac{\alpha}{2}\right)} \right) \sigma_{\alpha} \right)^2 + \left( \frac{1}{2} \frac{\cos{\left(\frac{\alpha+\sigma_{min}}{2}}{\sin{\left(\frac{\alpha}{2}\right)}} \sigma_{\lambda} \right)^2}
-    \sigma_{\eta} = \left| {\frac{\cos{\left( \frac{\alpha + \sigma_{min}}{2} \right)}}{2 \sin{\left(\frac{\alpha}{2}} \right)}} \right | \sqrt{\left( 1-\frac{\tan{\left(\frac{\alpha + \sigma_{min}}{2}}\right)}{\tan{\left( \frac{\alpha}{2} \right)}} \right)^2 \sigma_{\alpha}^2 + \sigma_{\delta}^2}
+    \sigma_{\eta} = 
+        \left|
+            \frac{
+                \cos{\left( \frac{\alpha + \sigma_{min}}{2} \right)}
+            }{
+                2 \sin{\left( \frac{\alpha}{2} \right)}
+            }
+        \right|
+        \sqrt{
+            \left(
+                1-\frac{
+                    \tan{\left(
+                        \frac{\alpha + \sigma_{min}}{2}
+                    \right)
+                }}{
+                \tan{\left(
+                    \frac{\alpha}{2}
+                \right)}}
+            \right)^2 \sigma_{\alpha}^2 + \sigma_{\delta}^2}
 \]
 
-Di seguito
+Di seguito sono riportati i valori di $\eta$ e $\sigma_{\eta}$ calcolati:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{ccc}
+        \hline
+        $\lambda \text{(nm)}$ & 
+        $\eta$ & 
+        $\sigma_{\eta}$ \\
+        \hline
+        404.7   &   1.9890 &   0.0003 \\
+        496.0   &   1.9938 &   0.0003 \\
+        546.1   &   1.9958 &   0.0003 \\
+        577.0   &   1.9966 &   0.0003 \\
+        690.8   &   1.9241 &   0.0003 \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo A - indice di rifrazione $\eta$ in funzione di $\lambda$}
+\end{table}
+
+Come si nota osservando i dati, la relazione tra la lunghezza d'onda $\lambda$ e l'indice di rifrazione $\eta$ e' di proporzionalita' diretta per tutte le lunghezze d'onda ad eccezione del rosso, questo ci porta a concludere che la relazione di Cauchy sicuramente non sara' verificata.
+
+Molto probabilmente le misure dell'angolo di deviazione minima sono state prese erroneamente, magari leggendo dal nonio sbagliato, di conseguenza tali misure non sono valide.
 
 \subsection{Gruppo B}
 Di seguito sono riportate le misure degli angolo $\theta_1$ e $\theta_2$:
@@ -173,7 +217,199 @@ Di seguito sono riportate le misure degli angolo $\theta_1$ e $\theta_2$:
     \caption{Gruppo B - misura degli angoli $\theta_1$ e $\theta_2$}
 \end{table}
 
-L'angolo $\alpha$ e' ottenuto tramite la formula:
+Di seguito i valori $\Delta \theta$ calcolati per ogni singola misura espressi in gradi decimali:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cc}
+        \hline
+        Misura & $\Delta \theta \text{ ($^{\circ}$)}$ \\
+        \hline
+        1   &   239.00 \\
+        2   &   240.00 \\
+        3   &   240.02 \\
+        4   &   241.03 \\
+        5   &   240.00 \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo B - angoli $\Delta \theta$ calcolati}
+\end{table}
+
+Notiamo che due misure (la \#1 e la \#4) hanno valori di $\Delta \theta$ molto disallineati rispetto alle altre tre.
+La media delle misure e' pari a $240.01^{\circ}$ e l'errore, ottenuto come deviazione standard della media, pari a $0.32^{\circ}$.
+Osserviamo che le misure \#1 e \#4, si trovano al di fuori dell'intervallo di semiampiezza pari al triplo dell'errore e centrato sulla media, e vengono quindi rigettate.
+
+Il miglior valore di $\Delta \theta$ e' quindi ottenuto come media delle tre misure rimanenti, mentre l'errore e' calcolato come la semidispersione massima:
+
+    \begin{align*}
+        &\Delta \theta = (240.01 \pm 0.01)^{\circ} \\
+        &\Delta \theta = 240^{\circ}\ 0.3^{\prime} \pm 0.5^{\prime} \\
+    \end{align*}
+
+
+L'angolo $\alpha$ e' quindi pari a:
+
+    \begin{align*}
+        &\alpha = (60.01 \pm 0.01)^{\circ} \\
+        &\alpha = 60^{\circ} \ 0.3^{\prime} \pm 0.5^{\prime}
+    \end{align*}
+
+
+Di seguito sono riportate le misure dell'angolo $\theta_0$ relativo alla posizione del cannocchiale rispetto al collimatore con il raggio non deviato:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{ccc}
+        \hline
+        Misura & $\theta_0 \text{ ($^{\circ}$)}$ & $\theta_0 \text{ ($^{\prime}$)}$ \\
+        \hline
+        1   &   58 &   40.0\\
+        2   &   58 &   40.5\\
+        3   &   58 &   40.0\\
+        4   &   58 &   40.0\\
+        5   &   58 &   41.0\\
+        6   &   58 &   41.0\\
+        7   &   58 &   40.0\\
+        8   &   58 &   41.0\\
+        9   &   58 &   41.0\\
+        10  &   58 &   40.5\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo A - misura angolo $\theta_0$}
+\end{table}
+
+L'errore $\sigma_{\theta_0}$ calcolato come deviazione standard della media e' pari a $0.2{\prime}$, quindi inferiore alla sensibilita' del nonio, viene quindi utilizzato come errore la sensibilita' del nonio.
+
+Il valore di $\theta_0$ e' quindi:
+
+    \begin{align*}
+        &\theta_0 = (58.68 \pm 0.01)^{\circ} \\
+        &\theta_0 = 58^{\circ} \ 40.5^{\prime} \pm 0.5^{\prime}
+    \end{align*}
+
+
+Di seguito la misura di $\theta_{\lambda}$, che corrisponde al punto di inversione del raggio rifratto dal prisma, in funzione della lunghezza d'onda $\lambda$ e relativo colore come rilevati nell'esperienza delle spettrometro a reticolo (la lunghezza d'onda del colore rosso non e' stata rilevata nell'esperienza precedente e viene quindi usato il valore tabulato assumendo una incertezza trascurabile):
+
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{clcccrr}
+        \hline
+        Misura & Colore & $\lambda \text{ (nm) }$ & $\sigma_{\lambda} \text{(nm)}$ & $\theta_{\lambda} \text{ ($^{\circ}$)}$ & $\theta_{\lambda} \text{ ($^{\prime}$)}$ & $\sigma_{\theta_{\lambda}} \text{ ($^{\prime}$)}$ \\
+        \hline
+        1   &   verde        &   547.2  & 1.8 &  351 &   25.0  & 1.0  \\
+        2   &   giallo sx    &   580.1  & 1.9 &  352 &   20.5  & 1.0  \\
+        3   &   indaco       &   434.2  & 2.5 &  347 &   6.0   & 1.0  \\
+        4   &   giallo dx    &   576.4  & 3.8 &  352 &   26.5  & 1.0  \\
+        5   &   verde        &   547.2  & 1.8 &  351 &   20.0  & 1.0  \\
+        6   &   indaco       &   434.2  & 2.5 &  347 &   0.0   & 1.0  \\
+        7   &   verde scuro  &   491.4  & 2.8 &  349 &   45.0  & 1.0  \\
+        8   &   giallo dx    &   576.4  & 3.8 &  352 &   4.5   & 1.0  \\
+        9   &   giallo sx    &   580.1  & 1.9 &  352 &   32.0  & 1.0  \\
+        10  &   verde scuro  &   491.4  & 2.8 &  349 &   40.0  & 1.0  \\
+        11  &   giallo dx    &   576.4  & 3.8 &  352 &   12.0  & 1.0  \\
+        12  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
+        13  &   verde        &   547.2  & 1.8 &  351 &   30.5  & 1.0  \\
+        14  &   indaco       &   434.2  & 2.5 &  347 &   7.0   & 1.0  \\
+        15  &   verde scuro  &   491.4  & 2.8 &  349 &   48.5  & 1.0  \\
+        16  &   rosso        &   690.8  & 0.0 &  354 &   0.0   & 1.0  \\
+        17  &   giallo dx    &   576.4  & 3.8 &  352 &   12.0  & 1.0  \\
+        18  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
+        19  &   verde        &   547.2  & 1.8 &  351 &   8.5   & 1.0  \\
+        20  &   indaco       &   434.2  & 2.5 &  347 &   0.0   & 1.0  \\
+        21  &   verde scuro  &   491.4  & 2.8 &  349 &   47.5  & 1.0  \\
+        22  &   rosso        &   690.8  & 0.0 &  354 &   0.0   & 1.0  \\
+        23  &   giallo dx    &   576.4  & 3.8 &  352 &   11.0  & 1.0  \\
+        24  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
+        25  &   verde        &   547.2  & 1.8 &  351 &   28.0  & 1.0  \\
+        26  &   indaco       &   434.2  & 2.5 &  347 &   5.0   & 1.0  \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
+\end{table}
+
+L'incertezza $\sigma_{\theta_{\lambda}}$ della misura corrispondente al punto di inversione e' stato valutato pari a $1^{\prime}$, dovuto alla larghezza del raggio luminoso inquadrato dal cannocchiale. 
+
+L'errore $\sigma_{delta}$ dell'angolo di deviazione minima e' calcolato come la somma in quadratura di $\sigma_{theta_0}$ e $\sigma_{\theta_{\lambda}}$.
+
+L'errore $\sigma_{\eta}$ e' calcolato mediante la formula di propagazione dell'errore.
+
+Di seguito i valori dell'angolo di deviazione minima $\delta_{min}$, $\sigma_{\delta}$, l'indice di rifrazione $\eta$, $\sigma_{\eta}$:
+
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{clcccrcc}
+        \hline
+            Misura &
+            Colore & 
+            $\lambda \text{ (nm) }$ & 
+            $\sigma_{\lambda} \text{(nm)}$ & 
+            $\delta_{min} \text{ ($^{\circ}$)}$ & 
+            $\sigma_{\delta} \text{ ($^{\circ}$)}$ & 
+            $\eta$ &
+            $\sigma_{\eta}$ \\
+        \hline
+        1   &   verde        &   547.2  & 1.8 &  67.26 &   0.02  & 1.7918 & 0.0002  \\
+        2   &   giallo sx    &   580.1  & 1.9 &  66.33 &   0.02  & 1.7845 & 0.0002  \\
+        3   &   indaco       &   434.2  & 2.5 &  71.58 &   0.02  & 1.8239 & 0.0002  \\
+        4   &   giallo dx    &   576.4  & 3.8 &  66.23 &   0.02  & 1.7838 & 0.0002  \\
+        5   &   verde        &   547.2  & 1.8 &  67.34 &   0.02  & 1.7924 & 0.0002  \\
+        6   &   indaco       &   434.2  & 2.5 &  71.68 &   0.02  & 1.8247 & 0.0002  \\
+        7   &   verde scuro  &   491.4  & 2.8 &  68.93 &   0.02  & 1.8045 & 0.0002  \\
+        8   &   giallo dx    &   576.4  & 3.8 &  66.60 &   0.02  & 1.7866 & 0.0002  \\
+        9   &   giallo sx    &   580.1  & 1.9 &  66.14 &   0.02  & 1.7830 & 0.0002  \\
+        10  &   verde scuro  &   491.4  & 2.8 &  69.01 &   0.02  & 1.8051 & 0.0002  \\
+        11  &   giallo dx    &   576.4  & 3.8 &  66.48 &   0.02  & 1.7857 & 0.0002  \\
+        12  &   giallo sx    &   580.1  & 1.9 &  66.34 &   0.02  & 1.7846 & 0.0002  \\
+        13  &   verde        &   547.2  & 1.8 &  67.17 &   0.02  & 1.7911 & 0.0002  \\
+        14  &   indaco       &   434.2  & 2.5 &  71.56 &   0.02  & 1.8238 & 0.0002  \\
+        15  &   verde scuro  &   491.4  & 2.8 &  68.87 &   0.02  & 1.8041 & 0.0002  \\
+        16  &   rosso        &   690.8  & 0.0 &  64.68 &   0.02  & 1.7713 & 0.0002  \\
+        17  &   giallo dx    &   576.4  & 3.8 &  66.48 &   0.02  & 1.7857 & 0.0002  \\
+        18  &   giallo sx    &   580.1  & 1.9 &  66.34 &   0.02  & 1.7846 & 0.0002  \\
+        19  &   verde        &   547.2  & 1.8 &  67.53 &   0.02  & 1.7939 & 0.0002  \\
+        20  &   indaco       &   434.2  & 2.5 &  71.68 &   0.02  & 1.8247 & 0.0002  \\
+        21  &   verde scuro  &   491.4  & 2.8 &  68.88 &   0.02  & 1.8042 & 0.0002  \\
+        22  &   rosso        &   690.8  & 0.0 &  64.68 &   0.02  & 1.7713 & 0.0002  \\
+        23  &   giallo dx    &   576.4  & 3.8 &  66.49 &   0.02  & 1.7858 & 0.0002  \\
+        24  &   giallo sx    &   580.1  & 1.9 &  66.34 &   0.02  & 1.7846 & 0.0002  \\
+        25  &   verde        &   547.2  & 1.8 &  67.21 &   0.02  & 1.7914 & 0.0002  \\
+        26  &   indaco       &   434.2  & 2.5 &  71.59 &   0.02  & 1.8241 & 0.0002  \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
+\end{table}
+
+I valori di $\eta$ e $\sigma_{\eta}$ per ogni lunghezza d'onda $\lambda$ sono stati calcolati utilizzando la media ponderata.
+
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{clcccc}
+        \hline
+            Misura &
+            Colore & 
+            $\lambda \text{ (nm) }$ &
+            $\sigma_{\lambda} \text{(nm)}$ & 
+            $\eta$ &
+            $\sigma_{\eta}$ \\
+        \hline
+        1   &   verde        &   547.2  & 1.8 &  1.7921 &   0.0001 \\
+        2   &   giallo sx    &   580.1  & 1.9 &  1.7843 &   0.0001 \\
+        3   &   indaco       &   434.2  & 2.5 &  1.8242 &   0.0001 \\
+        4   &   giallo dx    &   576.4  & 3.8 &  1.7855 &   0.0001 \\
+        5   &   verde scuro  &   491.4  & 2.8 &  1.8045 &   0.0001 \\
+        6   &   rosso        &   690.8  & 0.0 &  1.7713 &   0.0001 \\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
+\end{table}
+
+Per verificare la relazione di Cauchy sono stati messi in relazione i valori di $\eta^2$ e $\frac{1}{\lambda^2}$
+e valutando il fit tramite regressione lineare.
+Per riportare l'errore $\sigma_{\lambda}$ e' stato prima valutato il fattore $\alpha_{test}$ tra le lunghezze d'onda agli estremi (rosso e indaco)
 \[
-    \alpha = 180^{\circ} - \Delta \theta
+    \alpha_{test} = 5.9 \times 10^4 \ \text{m}^2
 \]
+
