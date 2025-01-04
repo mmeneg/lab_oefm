@@ -381,35 +381,96 @@ Di seguito i valori dell'angolo di deviazione minima $\delta_{min}$, $\sigma_{\d
     \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
 \end{table}
 
-I valori di $\eta$ e $\sigma_{\eta}$ per ogni lunghezza d'onda $\lambda$ sono stati calcolati utilizzando la media ponderata.
+I valori di $\eta$ e' calcolato come media delle misure per singola lunghezza d'onda $\lambda$ mentre l'errore $\sigma_{\eta}$ e' calcolato come deviazione standard della media.
+Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identiche, per questo viene preso come errore $\sigma_{\eta}$ l'errore propagato.
 
 \begin{table}[!htbp]
     {\par\centering
-    \begin{tabular}{clcccc}
+    \begin{tabular}{lcccc}
         \hline
-            Misura &
             Colore & 
             $\lambda \text{ (nm) }$ &
             $\sigma_{\lambda} \text{(nm)}$ & 
             $\eta$ &
             $\sigma_{\eta}$ \\
         \hline
-        1   &   verde        &   547.2  & 1.8 &  1.7921 &   0.0001 \\
-        2   &   giallo sx    &   580.1  & 1.9 &  1.7843 &   0.0001 \\
-        3   &   indaco       &   434.2  & 2.5 &  1.8242 &   0.0001 \\
-        4   &   giallo dx    &   576.4  & 3.8 &  1.7855 &   0.0001 \\
-        5   &   verde scuro  &   491.4  & 2.8 &  1.8045 &   0.0001 \\
-        6   &   rosso        &   690.8  & 0.0 &  1.7713 &   0.0001 \\
+        verde        &   547.2  & 1.8 &  1.7921 &   0.0005 \\
+        giallo sx    &   580.1  & 1.9 &  1.7843 &   0.0003 \\
+        indaco       &   434.2  & 2.5 &  1.8242 &   0.0002 \\
+        giallo dx    &   576.4  & 3.8 &  1.7855 &   0.0005 \\
+        verde scuro  &   491.4  & 2.8 &  1.8045 &   0.0002 \\
+        rosso        &   690.8  & 0.0 &  1.7713 &   0.0002 \\
         \hline
     \end{tabular}
     \par}
-    \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
+    \caption{Gruppo B - coefficiente di rifrazione $\eta$ in funzione di $\lambda$}
 \end{table}
 
 Per verificare la relazione di Cauchy sono stati messi in relazione i valori di $\eta^2$ e $\frac{1}{\lambda^2}$
 e valutando il fit tramite regressione lineare.
-Per riportare l'errore $\sigma_{\lambda}$ e' stato prima valutato il fattore $\alpha_{test}$ tra le lunghezze d'onda agli estremi (rosso e indaco)
+Per riportare l'errore $\sigma_{\lambda}$ sull'asse di $\eta^2$ e' stato valutato il fattore $\alpha_{test}$ tra le lunghezze d'onda agli estremi (rosso e indaco)
 \[
-    \alpha_{test} = 5.9 \times 10^4 \ \text{m}^2
+    \alpha_{test} = 5.9 \cdot 10^4 \ \text{nm$^2$}
 \]
 
+Di seguito i valori utilizzati per la regressione:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccccc}
+        \hline
+            $\eta^2$ &
+            $1/\lambda^2 \text{ (nm$^{-2}$)}$ &
+            $\sigma_{\eta^2}$ &
+            $\sigma_{1/\lambda^2} \text{ (nm$^{-2}$)}$ &
+            $\sigma_{\eta^2} \text{ da } \sigma_{1/\lambda^2}$ &
+            $\sigma_{\eta^2} \text{ TOT}$ \\
+        \hline
+        3.212   &   3.34$\cdot$10$^{-6}$  & 0.002 &  2.20$\cdot$10$^{-8}$ &   0.001 & 0.002\\
+        3.184   &   2.97$\cdot$10$^{-6}$  & 0.001 &  1.95$\cdot$10$^{-8}$ &   0.001 & 0.002\\
+        3.328   &   5.30$\cdot$10$^{-6}$  & 0.001 &  6.11$\cdot$10$^{-8}$ &   0.004 & 0.004\\
+        3.188   &   3.01$\cdot$10$^{-6}$  & 0.002 &  3.97$\cdot$10$^{-8}$ &   0.002 & 0.003\\
+        3.256   &   4.14$\cdot$10$^{-6}$  & 0.001 &  4.72$\cdot$10$^{-8}$ &   0.003 & 0.003\\
+        3.137   &   2.10$\cdot$10$^{-6}$  & 0.001 &  0                    &   0     & 0.001\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo B - valori utilizzati per la regressione lineare}
+\end{table}
+
+La regressione lineare fornisce le seguenti stime dei coefficienti $a$ e $b$:
+\begin{align*}
+    &b = (5.8 \pm 0.1) \cdot 10^4 \text{ (nm$^2$)} \\
+    &a = (3.0 \pm 0.0)
+\end{align*}
+
+Eseguendo il test del "chi quadro" otteniamo i seguenti risultati:
+\begin{align*}
+    &\chi_{tot}^2 = 10.8\\
+    &\text{GdL} = 4 \\
+    &\tilde{\chi}^2= 2.7 \\
+\end{align*}
+che corrisponde ad una probabilità del 3\%, a significare che la distribuzione osservata non e' descritta dalla relazione di Cauchy.
+
+Tuttavia notiamo che la misura relativa alla riga gialla di sinistra, "giallo sx", ha un "chi quadro" molto alto, come evidenziato dalla tabella sottostante:
+\begin{table}[!htbp]
+    {\par\centering
+    \begin{tabular}{cccccc}
+        \hline
+            Colore &
+            $\eta^2$ &
+            $1/\lambda^2 \text{ (nm$^2$)}$ &
+            $\sigma_{\eta^2} \text{ TOT}$ &
+            $\eta^2 \text{ da modello}$ &
+            $\chi^2$\\
+        \hline
+        verde       &   3.212   &   3.34$\cdot$10$^{-6}$  & 0.002   &   3.209   &   1.1\\
+        giallo sx   &   3.184   &   2.97$\cdot$10$^{-6}$  & 0.002   &   3.188   &   7.3\\
+        indaco      &   3.328   &   5.30$\cdot$10$^{-6}$  & 0.004   &   3.323   &   1.5\\
+        giallo dx   &   3.188   &   3.01$\cdot$10$^{-6}$  & 0.003   &   3.190   &   0.6\\
+        verde scuro &   3.256   &   4.14$\cdot$10$^{-6}$  & 0.003   &   3.256   &   0.0\\
+        rosso       &   3.137   &   2.10$\cdot$10$^{-6}$  & 0.001   &   3.137   &   0.4\\
+        \hline
+    \end{tabular}
+    \par}
+    \caption{Gruppo B - test del $\chi^2$}
+\end{table}
