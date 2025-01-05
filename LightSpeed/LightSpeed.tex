@@ -1,24 +1,34 @@
-\documentclass[12pt]{article}
-\usepackage[a4paper, margin=1in]{geometry}
-\usepackage{graphicx} 
+%documentMetadata{}
+\documentclass[a4paper,12pt]{article}
+
+%\usepackage[italian]{babel}
+\usepackage{pgfplots}
 \usepackage{amsmath}
 \usepackage{float}
-\usepackage{pgfplots}
+\usepackage{graphicx} %for the scheme
+\usepackage{array}
+\usepackage[margin=1in]{geometry}
 \pgfplotsset{width=10cm,compat=1.9}
-\begin{document}
-\begin{center}
-    \textbf{Università degli studi di Milano}
-    \par { \textbf{Laboratorio di ottica e fisica moderna A.A. 2024/2025}}
-    \vspace{7pt}
-    \par{Relazione di laboratorio}
-    \par{Pini Simone,Meneghini Maurizio,Malinouskaya Viktoryia}
-    \par 03/12/24
-    \vspace{15pt}
-    \par{\textbf{\Large Misura della velocità della luce}}
-\end{center}
-    
 
+\begin{document}
+
+\parskip=10pt plus 1pt
+\parindent=0pt
+
+\begin{center}
+    University of Milan
+
+\par{\Large{Optics, Electronics, and Modern Physics Laboratory}}  
+
+December 20, 2024 
+
+Group ME6
+\par
+
+
+\end{center}
 \input{abstract}
+
 
 %Scopo e modalità (in breve) 
 %Descrivere sinteticamente ciò che ci si propone di fare 
@@ -32,7 +42,9 @@
 %(questi ultimi, eventualmente, in appendice).
 %Presentare eventuali grafici con gli assi correttamente definiti (unità di 
 %misura, cifre significative, identificativo assi).
+
 \section{Procedure}
+
 \input{procedure}
 
 %Stima degli errori delle grandezze misurate (giustificare il metodo scelto)
@@ -46,3 +58,4 @@
 \input{conclusion}
 
 \end{document}
+
