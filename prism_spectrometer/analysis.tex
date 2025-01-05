@@ -99,17 +99,18 @@ a significare che il valore vero di $\theta_0$ ha il 95.5\% di probabilita' di e
 Di seguito e' riportata la misura dell'angolo $\theta_{\lambda}$ in corrispondenza di una determinata lunghezza d'onda $\lambda$:
 \begin{table}[!htbp]
     {\par\centering
-    \begin{tabular}{ccc}
+    \begin{tabular}{lccc}
         \hline
-        $\lambda \text{(nm)}$ &
-        $\theta_{\lambda} \text{ ($^{\circ}$)}$ & 
-        $\theta_{\lambda} \text{ ($^{\prime}$)}$ \\
+            Colore &
+            $\lambda \text{(nm)}$ &
+            $\theta_{\lambda} \text{ ($^{\circ}$)}$ & 
+            $\theta_{\lambda} \text{ ($^{\prime}$)}$ \\
         \hline
-        404.7   &   130 &   46.0\\
-        496.0   &   127 &   42.0\\
-        546.1   &   126 &   3.0\\
-        577.0   &   125 &   13.0\\
-        690.8   &   123 &   8.0\\
+        viola       &   404.2   &   130 &   46.0\\
+        verde scuro &   491.4   &   127 &   42.0\\
+        verde       &   547.7   &   126 &   3.0\\
+        giallo dx   &   576.9   &   125 &   13.0\\
+        rosso       &   690.8   &   123 &   8.0\\
         \hline
     \end{tabular}
     \par}
@@ -128,18 +129,19 @@ mentre l'incertezza $\sigma_{delta}$ e' pari alla somma in quadratura di $\sigma
 Di seguito e' riportato il valore calcolato di $\delta_{min}$ e la sua incertezza $\sigma_{delta}$ in funzione di $\lambda$:
 \begin{table}[!htbp]
     {\par\centering
-    \begin{tabular}{cccc}
+    \begin{tabular}{lcccc}
         \hline
-        $\lambda \text{(nm)}$ & 
-        $\delta_{min} \text{ ($^{\circ}$)}$ & 
-        $\delta_{min} \text{ ($^{\prime}$)}$ & 
-        $\sigma_{delta} \text{ ($^{\prime}$)}$\\
+            Colore&
+            $\lambda \text{(nm)}$ & 
+            $\delta_{min} \text{ ($^{\circ}$)}$ & 
+            $\delta_{min} \text{ ($^{\prime}$)}$ & 
+            $\sigma_{delta} \text{ ($^{\prime}$)}$\\
         \hline
-        404.7   &   108 &   6.6  & 1.1\\
-        496.0   &   111 &   10.6 & 1.1\\
-        546.1   &   112 &   49.6 & 1.1\\
-        577.0   &   113 &   39.6 & 1.1\\
-        690.8   &   115 &   44.6 & 1.1\\
+            viola       &   404.2   &   108 &   6.6  & 1.1\\
+            verde scuro &   491.4   &   111 &   10.6 & 1.1\\
+            verde       &   547.7   &   112 &   49.6 & 1.1\\
+            giallo dx   &   576.9   &   113 &   39.6 & 1.1\\
+            rosso       &   690.8   &   115 &   44.6 & 1.1\\
         \hline
     \end{tabular}
     \par}
@@ -147,12 +149,12 @@ Di seguito e' riportato il valore calcolato di $\delta_{min}$ e la sua incertezz
 \end{table}
 
 Il valore di $\eta (\lambda)$ e' stato calcolato tramite la relazione:
-\[
+\begin{align}
     \eta (\lambda) = \frac{\sin{\frac{\alpha + \sigma_{min} (\lambda)}{2}}}{\sin{\frac{\alpha}{2}}}
-\]
+\end{align}
 
 mentre l'errore $\sigma_{\eta}$ e' stato calcolato tramite la formula di propagazione degli errori, ovvero la relazione:
-\[
+\begin{align}
     \sigma_{\eta} = 
         \left|
             \frac{
@@ -172,22 +174,23 @@ mentre l'errore $\sigma_{\eta}$ e' stato calcolato tramite la formula di propaga
                     \frac{\alpha}{2}
                 \right)}}
             \right)^2 \sigma_{\alpha}^2 + \sigma_{\delta}^2}
-\]
+\end{align}
 
 Di seguito sono riportati i valori di $\eta$ e $\sigma_{\eta}$ calcolati:
 \begin{table}[!htbp]
     {\par\centering
-    \begin{tabular}{ccc}
+    \begin{tabular}{lccc}
         \hline
-        $\lambda \text{(nm)}$ & 
-        $\eta$ & 
-        $\sigma_{\eta}$ \\
+            Colore &
+            $\lambda \text{(nm)}$ & 
+            $\eta$ & 
+            $\sigma_{\eta}$ \\
         \hline
-        404.7   &   1.9890 &   0.0003 \\
-        496.0   &   1.9938 &   0.0003 \\
-        546.1   &   1.9958 &   0.0003 \\
-        577.0   &   1.9966 &   0.0003 \\
-        690.8   &   1.9241 &   0.0003 \\
+        viola       &   404.2   &   1.9890 &   0.0003 \\
+        verde scuro &   491.4   &   1.9938 &   0.0003 \\
+        verde       &   547.7   &   1.9958 &   0.0003 \\
+        giallo dx   &   576.9   &   1.9966 &   0.0003 \\
+        rosso       &   690.8   &   1.9241 &   0.0003 \\
         \hline
     \end{tabular}
     \par}
@@ -204,13 +207,17 @@ Di seguito sono riportate le misure degli angolo $\theta_1$ e $\theta_2$:
     {\par\centering
     \begin{tabular}{ccccc}
         \hline
-        Misura & $\theta_1 \text{ ($^{\circ}$)}$ & $\theta_1 \text{ ($^{\prime}$)}$ & $\theta_2 \text{ ($^{\circ}$)}$ & $\theta_2 \text{ ($^{\prime}$)}$ \\
+            Misura & 
+            $\theta_1 \text{ ($^{\circ}$)}$ &
+            $\theta_1 \text{ ($^{\prime}$)}$ & 
+            $\theta_2 \text{ ($^{\circ}$)}$ & 
+            $\theta_2 \text{ ($^{\prime}$)}$ \\
         \hline
-        1   &   246 &   30.0    &   7 &   30.0\\
-        2   &   249 &   0.0    &   9 &   0.0\\
+        1   &   246 &   30.0    &   7  &   30.0\\
+        2   &   249 &   0.0     &   9  &   0.0\\
         3   &   256 &   42.0    &   16 &   41.0\\
         4   &   253 &   29.0    &   12 &   27.0\\
-        5   &   242 &   0.0 &   2 &   0.0\\
+        5   &   242 &   0.0     &   2  &   0.0\\
         \hline
     \end{tabular}
     \par}
@@ -239,7 +246,7 @@ Notiamo che due misure (la \#1 e la \#4) hanno valori di $\Delta \theta$ molto d
 La media delle misure e' pari a $240.01^{\circ}$ e l'errore, ottenuto come deviazione standard della media, pari a $0.32^{\circ}$.
 Osserviamo che le misure \#1 e \#4, si trovano al di fuori dell'intervallo di semiampiezza pari al triplo dell'errore e centrato sulla media, e vengono quindi rigettate.
 
-Il miglior valore di $\Delta \theta$ e' quindi ottenuto come media delle tre misure rimanenti, mentre l'errore e' calcolato come la semidispersione massima:
+Il miglior valore di $\Delta \theta$ e' quindi ottenuto come media delle tre misure rimanenti, mentre l'errore e' calcolato come semidispersione massima:
 
     \begin{align*}
         &\Delta \theta = (240.01 \pm 0.01)^{\circ} \\
@@ -275,10 +282,10 @@ Di seguito sono riportate le misure dell'angolo $\theta_0$ relativo alla posizio
         \hline
     \end{tabular}
     \par}
-    \caption{Gruppo A - misura angolo $\theta_0$}
+    \caption{Gruppo B - misura angolo $\theta_0$}
 \end{table}
 
-L'errore $\sigma_{\theta_0}$ calcolato come deviazione standard della media e' pari a $0.2{\prime}$, quindi inferiore alla sensibilita' del nonio, viene quindi utilizzato come errore la sensibilita' del nonio.
+L'errore $\sigma_{\theta_0}$ calcolato come deviazione standard della media e' pari a $0.2^{\prime}$, quindi inferiore alla sensibilita' del nonio, viene quindi utilizzato come errore la sensibilita' del nonio.
 
 Il valore di $\theta_0$ e' quindi:
 
@@ -294,34 +301,40 @@ Di seguito la misura di $\theta_{\lambda}$, che corrisponde al punto di inversio
     {\par\centering
     \begin{tabular}{clcccrr}
         \hline
-        Misura & Colore & $\lambda \text{ (nm) }$ & $\sigma_{\lambda} \text{(nm)}$ & $\theta_{\lambda} \text{ ($^{\circ}$)}$ & $\theta_{\lambda} \text{ ($^{\prime}$)}$ & $\sigma_{\theta_{\lambda}} \text{ ($^{\prime}$)}$ \\
+            Misura & 
+            Colore & 
+            $\lambda \text{ (nm) }$ & 
+            $\sigma_{\lambda} \text{(nm)}$ & 
+            $\theta_{\lambda} \text{ ($^{\circ}$)}$ & 
+            $\theta_{\lambda} \text{ ($^{\prime}$)}$ & 
+            $\sigma_{\theta_{\lambda}} \text{ ($^{\prime}$)}$ \\
         \hline
-        1   &   verde        &   547.2  & 1.8 &  351 &   25.0  & 1.0  \\
-        2   &   giallo sx    &   580.1  & 1.9 &  352 &   20.5  & 1.0  \\
-        3   &   indaco       &   434.2  & 2.5 &  347 &   6.0   & 1.0  \\
-        4   &   giallo dx    &   576.4  & 3.8 &  352 &   26.5  & 1.0  \\
-        5   &   verde        &   547.2  & 1.8 &  351 &   20.0  & 1.0  \\
-        6   &   indaco       &   434.2  & 2.5 &  347 &   0.0   & 1.0  \\
-        7   &   verde scuro  &   491.4  & 2.8 &  349 &   45.0  & 1.0  \\
-        8   &   giallo dx    &   576.4  & 3.8 &  352 &   4.5   & 1.0  \\
-        9   &   giallo sx    &   580.1  & 1.9 &  352 &   32.0  & 1.0  \\
-        10  &   verde scuro  &   491.4  & 2.8 &  349 &   40.0  & 1.0  \\
-        11  &   giallo dx    &   576.4  & 3.8 &  352 &   12.0  & 1.0  \\
-        12  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
-        13  &   verde        &   547.2  & 1.8 &  351 &   30.5  & 1.0  \\
-        14  &   indaco       &   434.2  & 2.5 &  347 &   7.0   & 1.0  \\
-        15  &   verde scuro  &   491.4  & 2.8 &  349 &   48.5  & 1.0  \\
-        16  &   rosso        &   690.8  & 0.0 &  354 &   0.0   & 1.0  \\
-        17  &   giallo dx    &   576.4  & 3.8 &  352 &   12.0  & 1.0  \\
-        18  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
-        19  &   verde        &   547.2  & 1.8 &  351 &   8.5   & 1.0  \\
-        20  &   indaco       &   434.2  & 2.5 &  347 &   0.0   & 1.0  \\
-        21  &   verde scuro  &   491.4  & 2.8 &  349 &   47.5  & 1.0  \\
-        22  &   rosso        &   690.8  & 0.0 &  354 &   0.0   & 1.0  \\
-        23  &   giallo dx    &   576.4  & 3.8 &  352 &   11.0  & 1.0  \\
-        24  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
-        25  &   verde        &   547.2  & 1.8 &  351 &   28.0  & 1.0  \\
-        26  &   indaco       &   434.2  & 2.5 &  347 &   5.0   & 1.0  \\
+            1   &   verde        &   547.2  & 1.8 &  351 &   25.0  & 1.0  \\
+            2   &   giallo sx    &   580.1  & 1.9 &  352 &   20.5  & 1.0  \\
+            3   &   indaco       &   434.2  & 2.5 &  347 &   6.0   & 1.0  \\
+            4   &   giallo dx    &   576.4  & 3.8 &  352 &   26.5  & 1.0  \\
+            5   &   verde        &   547.2  & 1.8 &  351 &   20.0  & 1.0  \\
+            6   &   indaco       &   434.2  & 2.5 &  347 &   0.0   & 1.0  \\
+            7   &   verde scuro  &   491.4  & 2.8 &  349 &   45.0  & 1.0  \\
+            8   &   giallo dx    &   576.4  & 3.8 &  352 &   4.5   & 1.0  \\
+            9   &   giallo sx    &   580.1  & 1.9 &  352 &   32.0  & 1.0  \\
+            10  &   verde scuro  &   491.4  & 2.8 &  349 &   40.0  & 1.0  \\
+            11  &   giallo dx    &   576.4  & 3.8 &  352 &   12.0  & 1.0  \\
+            12  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
+            13  &   verde        &   547.2  & 1.8 &  351 &   30.5  & 1.0  \\
+            14  &   indaco       &   434.2  & 2.5 &  347 &   7.0   & 1.0  \\
+            15  &   verde scuro  &   491.4  & 2.8 &  349 &   48.5  & 1.0  \\
+            16  &   rosso        &   690.8  & 0.0 &  354 &   0.0   & 1.0  \\
+            17  &   giallo dx    &   576.4  & 3.8 &  352 &   12.0  & 1.0  \\
+            18  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
+            19  &   verde        &   547.2  & 1.8 &  351 &   8.5   & 1.0  \\
+            20  &   indaco       &   434.2  & 2.5 &  347 &   0.0   & 1.0  \\
+            21  &   verde scuro  &   491.4  & 2.8 &  349 &   47.5  & 1.0  \\
+            22  &   rosso        &   690.8  & 0.0 &  354 &   0.0   & 1.0  \\
+            23  &   giallo dx    &   576.4  & 3.8 &  352 &   11.0  & 1.0  \\
+            24  &   giallo sx    &   580.1  & 1.9 &  352 &   20.0  & 1.0  \\
+            25  &   verde        &   547.2  & 1.8 &  351 &   28.0  & 1.0  \\
+            26  &   indaco       &   434.2  & 2.5 &  347 &   5.0   & 1.0  \\
         \hline
     \end{tabular}
     \par}
@@ -330,7 +343,7 @@ Di seguito la misura di $\theta_{\lambda}$, che corrisponde al punto di inversio
 
 L'incertezza $\sigma_{\theta_{\lambda}}$ della misura corrispondente al punto di inversione e' stato valutato pari a $1^{\prime}$, dovuto alla larghezza del raggio luminoso inquadrato dal cannocchiale. 
 
-L'errore $\sigma_{delta}$ dell'angolo di deviazione minima e' calcolato come la somma in quadratura di $\sigma_{theta_0}$ e $\sigma_{\theta_{\lambda}}$.
+L'errore $\sigma_{\delta}$ dell'angolo di deviazione minima e' calcolato come la somma in quadratura di $\sigma_{\theta_0}$ e $\sigma_{\theta_{\lambda}}$.
 
 L'errore $\sigma_{\eta}$ e' calcolato mediante la formula di propagazione dell'errore.
 
@@ -381,7 +394,8 @@ Di seguito i valori dell'angolo di deviazione minima $\delta_{min}$, $\sigma_{\d
     \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
 \end{table}
 
-I valori di $\eta$ e' calcolato come media delle misure per singola lunghezza d'onda $\lambda$ mentre l'errore $\sigma_{\eta}$ e' calcolato come deviazione standard della media.
+Per ogni singola lunghezza d'onda avendo a disposizione cinque misure (ad eccezione del verde scuro: quattro misure, e del rosso: due misure), il valore di $\eta$ e' calcolato come media delle misure per singola lunghezza d'onda $\lambda$, mentre l'errore $\sigma_{\eta}$ e' calcolato come semidispersione massima.
+
 Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identiche, per questo viene preso come errore $\sigma_{\eta}$ l'errore propagato.
 
 \begin{table}[!htbp]
@@ -394,11 +408,11 @@ Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identi
             $\eta$ &
             $\sigma_{\eta}$ \\
         \hline
-        verde        &   547.2  & 1.8 &  1.7921 &   0.0005 \\
-        giallo sx    &   580.1  & 1.9 &  1.7843 &   0.0003 \\
-        indaco       &   434.2  & 2.5 &  1.8242 &   0.0002 \\
-        giallo dx    &   576.4  & 3.8 &  1.7855 &   0.0005 \\
-        verde scuro  &   491.4  & 2.8 &  1.8045 &   0.0002 \\
+        verde        &   547.2  & 1.8 &  1.7921 &   0.0014 \\
+        giallo sx    &   580.1  & 1.9 &  1.7843 &   0.0008 \\
+        indaco       &   434.2  & 2.5 &  1.8242 &   0.0004 \\
+        giallo dx    &   576.4  & 3.8 &  1.7855 &   0.0014 \\
+        verde scuro  &   491.4  & 2.8 &  1.8045 &   0.0005 \\
         rosso        &   690.8  & 0.0 &  1.7713 &   0.0002 \\
         \hline
     \end{tabular}
@@ -406,71 +420,110 @@ Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identi
     \caption{Gruppo B - coefficiente di rifrazione $\eta$ in funzione di $\lambda$}
 \end{table}
 
-Per verificare la relazione di Cauchy sono stati messi in relazione i valori di $\eta^2$ e $\frac{1}{\lambda^2}$
+Per verificare la relazione di Cauchy sono stati messi in relazione i valori di $\eta^2$ e $1/\lambda^2$
 e valutando il fit tramite regressione lineare.
-Per riportare l'errore $\sigma_{\lambda}$ sull'asse di $\eta^2$ e' stato valutato il fattore $\alpha_{test}$ tra le lunghezze d'onda agli estremi (rosso e indaco)
-\[
-    \alpha_{test} = 5.9 \cdot 10^4 \ \text{nm$^2$}
-\]
+%Per riportare l'errore $\sigma_{\lambda}$ sull'asse di $\eta^2$ e' stato valutato il fattore $\alpha_{test}$ tra le lunghezze d'onda agli estremi (rosso e indaco)
+%\[
+%    \alpha_{test} = 5.9 \cdot 10^4 \ \text{nm$^2$}
+%\]
 
 Di seguito i valori utilizzati per la regressione:
 \begin{table}[!htbp]
     {\par\centering
-    \begin{tabular}{cccccc}
+    \begin{tabular}{lccc}
         \hline
+            Colore &
             $\eta^2$ &
             $1/\lambda^2 \text{ (nm$^{-2}$)}$ &
-            $\sigma_{\eta^2}$ &
-            $\sigma_{1/\lambda^2} \text{ (nm$^{-2}$)}$ &
-            $\sigma_{\eta^2} \text{ da } \sigma_{1/\lambda^2}$ &
-            $\sigma_{\eta^2} \text{ TOT}$ \\
+            $\sigma_{\eta^2}$ \\%&
+            %$\sigma_{1/\lambda^2} \text{ (nm$^{-2}$)}$ &
+            %$\sigma_{\eta^2} \text{ da } \sigma_{1/\lambda^2}$ &
+            %$\sigma_{\eta^2} \text{ TOT}$ \\
         \hline
-        3.212   &   3.34$\cdot$10$^{-6}$  & 0.002 &  2.20$\cdot$10$^{-8}$ &   0.001 & 0.002\\
-        3.184   &   2.97$\cdot$10$^{-6}$  & 0.001 &  1.95$\cdot$10$^{-8}$ &   0.001 & 0.002\\
-        3.328   &   5.30$\cdot$10$^{-6}$  & 0.001 &  6.11$\cdot$10$^{-8}$ &   0.004 & 0.004\\
-        3.188   &   3.01$\cdot$10$^{-6}$  & 0.002 &  3.97$\cdot$10$^{-8}$ &   0.002 & 0.003\\
-        3.256   &   4.14$\cdot$10$^{-6}$  & 0.001 &  4.72$\cdot$10$^{-8}$ &   0.003 & 0.003\\
-        3.137   &   2.10$\cdot$10$^{-6}$  & 0.001 &  0                    &   0     & 0.001\\
+        verde        &  3.212   &   3.33$\cdot$10$^{-6}$  & 0.005 \\%&  2.20$\cdot$10$^{-8}$ &   0.001 & 0.002\\
+        giallo sx    &  3.184   &   2.97$\cdot$10$^{-6}$  & 0.003 \\%&  1.95$\cdot$10$^{-8}$ &   0.001 & 0.002\\
+        indaco       &  3.328   &   5.29$\cdot$10$^{-6}$  & 0.002 \\%&  6.11$\cdot$10$^{-8}$ &   0.004 & 0.004\\
+        giallo dx    &  3.188   &   3.00$\cdot$10$^{-6}$  & 0.005 \\%&  3.97$\cdot$10$^{-8}$ &   0.002 & 0.003\\
+        verde scuro  &  3.256   &   4.14$\cdot$10$^{-6}$  & 0.002 \\%&  4.72$\cdot$10$^{-8}$ &   0.003 & 0.003\\
+        rosso        &  3.137   &   2.10$\cdot$10$^{-6}$  & 0.001 \\%&  0                    &   0     & 0.001\\
         \hline
     \end{tabular}
     \par}
     \caption{Gruppo B - valori utilizzati per la regressione lineare}
 \end{table}
 
+L'errore $\sigma_{\eta^2}$ e' calcolato tramite propagazione dell'errore:
+\begin{align}
+    \sigma_{\eta^2} = 2 \eta \sigma_{\eta}
+\end{align}
+
+Di seguito il grafico della regressione lineare:
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        title=Andamento $\eta^2 (\lambda)$,
+        xlabel=$1/\lambda^2 \text{ (nm$^{-2}$)}$,
+        ylabel=$\eta^2$,
+        minor y tick num=1,
+        minor x tick num=1,
+        x tick label style={
+            /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=1,
+            /tikz/.cd
+        }
+    ]
+        \addplot[color=blue, domain=0.0000020:0.0000055]{3.01292+x*59237.22405};
+        \addplot+[scatter, only marks, mark=*, mark options={solid}, mark size=1.0pt, error bars/.cd, y dir=both,y explicit, error mark=-]
+            coordinates {
+                (0.00000333,3.2116)   +-  (0,0.0051)
+                (0.00000297,3.1836)   +-  (0,0.0028)
+                (0.00000529,3.3278)  +-  (0,0.0015)
+                (0.00000300,3.1880)  +-  (0,0.0051)
+                (0.00000414,3.2561)  +-  (0,0.0019)
+                (0.00000210,3.1375)  +-  (0,0.0008)
+        };
+    \end{axis}
+\end{tikzpicture}
+\end{center}
+
 La regressione lineare fornisce le seguenti stime dei coefficienti $a$ e $b$:
 \begin{align*}
-    &b = (5.8 \pm 0.1) \cdot 10^4 \text{ (nm$^2$)} \\
+    &b = (5.9 \pm 0.1) \cdot 10^4 \text{ nm$^2$} \\
     &a = (3.0 \pm 0.0)
 \end{align*}
 
 Eseguendo il test del "chi quadro" otteniamo i seguenti risultati:
 \begin{align*}
-    &\chi_{tot}^2 = 10.8\\
+    &\chi_{tot}^2 = 5.9\\
     &\text{GdL} = 4 \\
-    &\tilde{\chi}^2= 2.7 \\
+    &\tilde{\chi}^2= 1.5 \\
 \end{align*}
-che corrisponde ad una probabilità del 3\%, a significare che la distribuzione osservata non e' descritta dalla relazione di Cauchy.
+che corrisponde ad una probabilità del 21\%, a significare che la distribuzione osservata e' descrivibile con la relazione di Cauchy.
 
-Tuttavia notiamo che la misura relativa alla riga gialla di sinistra, "giallo sx", ha un "chi quadro" molto alto, come evidenziato dalla tabella sottostante:
+Inoltre notiamo che la misura relativa alla riga del giallo di sinistra, "giallo sx", ha un "chi quadro" molto alto rispetto alle altre misure, come evidenziato dalla tabella sottostante:
 \begin{table}[!htbp]
     {\par\centering
     \begin{tabular}{cccccc}
         \hline
             Colore &
             $\eta^2$ &
-            $1/\lambda^2 \text{ (nm$^2$)}$ &
-            $\sigma_{\eta^2} \text{ TOT}$ &
+            $1/\lambda^2 \text{ (nm$^{-2}$)}$ &
+            $\sigma_{\eta^2}$ &
             $\eta^2 \text{ da modello}$ &
             $\chi^2$\\
         \hline
-        verde       &   3.212   &   3.34$\cdot$10$^{-6}$  & 0.002   &   3.209   &   1.1\\
-        giallo sx   &   3.184   &   2.97$\cdot$10$^{-6}$  & 0.002   &   3.188   &   7.3\\
-        indaco      &   3.328   &   5.30$\cdot$10$^{-6}$  & 0.004   &   3.323   &   1.5\\
-        giallo dx   &   3.188   &   3.01$\cdot$10$^{-6}$  & 0.003   &   3.190   &   0.6\\
-        verde scuro &   3.256   &   4.14$\cdot$10$^{-6}$  & 0.003   &   3.256   &   0.0\\
-        rosso       &   3.137   &   2.10$\cdot$10$^{-6}$  & 0.001   &   3.137   &   0.4\\
+        verde       &   3.212   &   3.33$\cdot$10$^{-6}$  & 0.005   &   3.210   &   0.1\\
+        giallo sx   &   3.184   &   2.97$\cdot$10$^{-6}$  & 0.003   &   3.188   &   2.9\\
+        indaco      &   3.328   &   5.29$\cdot$10$^{-6}$  & 0.002   &   3.326   &   0.9\\
+        giallo dx   &   3.188   &   3.00$\cdot$10$^{-6}$  & 0.005   &   3.191   &   0.3\\
+        verde scuro &   3.256   &   4.14$\cdot$10$^{-6}$  & 0.002   &   3.258   &   1.0\\
+        rosso       &   3.137   &   2.10$\cdot$10$^{-6}$  & 0.001   &   3.137   &   0.6\\
         \hline
     \end{tabular}
     \par}
     \caption{Gruppo B - test del $\chi^2$}
 \end{table}
+
+%Questo ci suggerisce che le misure dell'angolo di devizione minima per la riga "giallo sx" 
