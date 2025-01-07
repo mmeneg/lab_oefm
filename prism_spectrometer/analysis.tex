@@ -90,11 +90,11 @@ Di seguito sono riportate le misure dell'angolo $\theta_0$ relativo alla posizio
     \caption{Gruppo A - misura angolo $\theta_0$}
 \end{table}
 
-Il miglior valore di $\theta_0$ e' ottenuto tramite la media delle dieci misurazioni indipendenti effettuate, mentre essendo la deviazione standard della media $\sigma_{\bar{\theta_0}}$ inferiore alla sensibilita' del nonio, viene preso come errore $\sigma_{\theta_0}$ il doppio della deviazione standard della media $2\sigma_{\bar{\theta_0}}$,
+Il miglior valore di $\theta_0$ e' ottenuto tramite la media delle dieci misurazioni indipendenti effettuate, mentre essendo la deviazione standard della media $\sigma_{\bar{\theta_0}}$ inferiore alla sensibilita' del nonio, viene preso come errore $\sigma_{\theta_0}$ la sensibilita' del nonio.
+
 \[
     \theta_0 = 238^{\circ} \ 52.6^{\prime} \pm 0.5^{\prime}
 \]
-a significare che il valore vero di $\theta_0$ ha il 95.5\% di probabilita' di essere contenuto in tale intervallo.
 
 Di seguito e' riportata la misura dell'angolo $\theta_{\lambda}$ in corrispondenza di una determinata lunghezza d'onda $\lambda$:
 \begin{table}[!htbp]
@@ -190,14 +190,41 @@ Di seguito sono riportati i valori di $\eta$ e $\sigma_{\eta}$ calcolati:
         verde scuro &   491.4   &   1.9938 &   0.0003 \\
         verde       &   547.7   &   1.9958 &   0.0003 \\
         giallo dx   &   576.9   &   1.9966 &   0.0003 \\
-        rosso       &   690.8   &   1.9241 &   0.0003 \\
         \hline
     \end{tabular}
     \par}
     \caption{Gruppo A - indice di rifrazione $\eta$ in funzione di $\lambda$}
 \end{table}
 
-Come si nota osservando i dati, la relazione tra la lunghezza d'onda $\lambda$ e l'indice di rifrazione $\eta$ e' di proporzionalita' diretta per tutte le lunghezze d'onda ad eccezione del rosso, questo ci porta a concludere che la relazione di Cauchy sicuramente non sara' verificata.
+Come si nota osservando i dati, la relazione tra la lunghezza d'onda $\lambda$ e l'indice di rifrazione $\eta$ e' di proporzionalita' diretta per tutte le lunghezze d'onda, contrariamente a quanto ci si sarebbe aspettato.
+A maggior ragione mettendo in relazione il quadrato dell'indice di rifrazione $\eta_{\lambda}^2$ con il quadrato del reciproco della lunghezza d'onda $1/\lambda^2$ notiamo che la relazione potrebbe essere di proporzionalità diretta ma con una pendenza negativa.
+
+\begin{center}
+\begin{tikzpicture}
+    \begin{axis}[
+        title=Andamento $\eta^2 (\lambda)$,
+        xlabel=$1/\lambda^2 \text{ (nm$^{-2}$)}$,
+        ylabel=$\eta^2$,
+        minor y tick num=1,
+        minor x tick num=1,
+        x tick label style={
+            /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=1,
+            /tikz/.cd
+        }
+    ]
+        \addplot+[scatter, only marks, mark=*, mark options={solid}, mark size=1.0pt, error bars/.cd, y dir=both,y explicit, error mark=-]
+            coordinates {
+                (0.00000612,3.9560)   +-  (0,0.0011)
+                (0.00000414,3.9752)   +-  (0,0.0012)
+                (0.00000333,3.9832)  +-  (0,0.0012)
+                (0.00000300,3.9866)  +-  (0,0.0012)
+        };
+    \end{axis}
+\end{tikzpicture}
+\end{center}
 
 Molto probabilmente le misure dell'angolo di deviazione minima sono state prese erroneamente, magari leggendo dal nonio sbagliato, di conseguenza tali misure non sono valide.
 
@@ -341,7 +368,8 @@ Di seguito la misura di $\theta_{\lambda}$, che corrisponde al punto di inversio
     \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
 \end{table}
 
-L'incertezza $\sigma_{\theta_{\lambda}}$ della misura corrispondente al punto di inversione e' stato valutato pari a $1^{\prime}$, dovuto alla larghezza del raggio luminoso inquadrato dal cannocchiale. 
+Purtroppo durante le misure del punto di inversione non abbiamo valutato correttamente l'incertezza, qualitativamente legata alle difficoltà di inquadrare il crocifilo nel centro della riga, e quindi proporzionale alla larghezza stessa della riga.
+Abbiamo quindi assunto l'incertezza $\sigma_{\theta_{\lambda}}$ della misura corrispondente al punto di inversione come il doppio della sensibilità del nonio, ovvero $1^{\prime}$. 
 
 L'errore $\sigma_{\delta}$ dell'angolo di deviazione minima e' calcolato come la somma in quadratura di $\sigma_{\theta_0}$ e $\sigma_{\theta_{\lambda}}$.
 
@@ -394,9 +422,9 @@ Di seguito i valori dell'angolo di deviazione minima $\delta_{min}$, $\sigma_{\d
     \caption{Gruppo B - misura del punto di inversione $\theta_{\lambda}$}
 \end{table}
 
-Per ogni singola lunghezza d'onda avendo a disposizione cinque misure (ad eccezione del verde scuro: quattro misure, e del rosso: due misure), il valore di $\eta$ e' calcolato come media delle misure per singola lunghezza d'onda $\lambda$, mentre l'errore $\sigma_{\eta}$ e' calcolato come semidispersione massima.
+Per ogni singola lunghezza d'onda avendo a disposizione cinque misure (ad eccezione del verde scuro: quattro misure, e del rosso: due misure), l'errore $\sigma_{\eta}$ viene preso come errore massimo per compensare l'errore sottostimato nella misura di $\delta_{min}$ e calcolato come semidispersione massima.
 
-Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identiche, per questo viene preso come errore $\sigma_{\eta}$ l'errore propagato.
+Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identiche, per questo viene preso come errore $\sigma_{\eta}$ il triplo dell'errore propagato, a significare che la vera misura di $\eta_{rosso}$ ha il 99.7\% di probabilità di trovarsi entro tale intervallo.
 
 \begin{table}[!htbp]
     {\par\centering
@@ -413,7 +441,7 @@ Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identi
         indaco       &   434.2  & 2.5 &  1.8242 &   0.0004 \\
         giallo dx    &   576.4  & 3.8 &  1.7855 &   0.0014 \\
         verde scuro  &   491.4  & 2.8 &  1.8045 &   0.0005 \\
-        rosso        &   690.8  & 0.0 &  1.7713 &   0.0002 \\
+        rosso        &   690.8  & 0.0 &  1.7713 &   0.0006 \\
         \hline
     \end{tabular}
     \par}
@@ -422,7 +450,7 @@ Fa eccezione il colore rosso, per il quale abbiamo disponibili due misure identi
 
 Per verificare la relazione di Cauchy sono stati messi in relazione i valori di $\eta^2$ e $1/\lambda^2$
 e valutando il fit tramite regressione lineare.
-%Per riportare l'errore $\sigma_{\lambda}$ sull'asse di $\eta^2$ e' stato valutato il fattore $\alpha_{test}$ tra le lunghezze d'onda agli estremi (rosso e indaco)
+%Per riportare l'errore $\sigma_{\lambda}$ sull'asse di $\eta^2$ è stato valutato il fattore $\alpha_{test}$ tra le lunghezze d'onda agli estremi (rosso e indaco)
 %\[
 %    \alpha_{test} = 5.9 \cdot 10^4 \ \text{nm$^2$}
 %\]
@@ -445,7 +473,7 @@ Di seguito i valori utilizzati per la regressione:
         indaco       &  3.328   &   5.29$\cdot$10$^{-6}$  & 0.002 \\%&  6.11$\cdot$10$^{-8}$ &   0.004 & 0.004\\
         giallo dx    &  3.188   &   3.00$\cdot$10$^{-6}$  & 0.005 \\%&  3.97$\cdot$10$^{-8}$ &   0.002 & 0.003\\
         verde scuro  &  3.256   &   4.14$\cdot$10$^{-6}$  & 0.002 \\%&  4.72$\cdot$10$^{-8}$ &   0.003 & 0.003\\
-        rosso        &  3.137   &   2.10$\cdot$10$^{-6}$  & 0.001 \\%&  0                    &   0     & 0.001\\
+        rosso        &  3.138   &   2.10$\cdot$10$^{-6}$  & 0.002 \\%&  0                    &   0     & 0.001\\
         \hline
     \end{tabular}
     \par}
@@ -474,7 +502,7 @@ Di seguito il grafico della regressione lineare:
             /tikz/.cd
         }
     ]
-        \addplot[color=blue, domain=0.0000020:0.0000055]{3.01292+x*59237.22405};
+        \addplot[color=blue, domain=0.0000020:0.0000055]{3.00921+x*60011.682180};
         \addplot+[scatter, only marks, mark=*, mark options={solid}, mark size=1.0pt, error bars/.cd, y dir=both,y explicit, error mark=-]
             coordinates {
                 (0.00000333,3.2116)   +-  (0,0.0051)
@@ -482,7 +510,7 @@ Di seguito il grafico della regressione lineare:
                 (0.00000529,3.3278)  +-  (0,0.0015)
                 (0.00000300,3.1880)  +-  (0,0.0051)
                 (0.00000414,3.2561)  +-  (0,0.0019)
-                (0.00000210,3.1375)  +-  (0,0.0008)
+                (0.00000210,3.1375)  +-  (0,0.0023)
         };
     \end{axis}
 \end{tikzpicture}
@@ -490,17 +518,17 @@ Di seguito il grafico della regressione lineare:
 
 La regressione lineare fornisce le seguenti stime dei coefficienti $a$ e $b$:
 \begin{align*}
-    &b = (5.9 \pm 0.1) \cdot 10^4 \text{ nm$^2$} \\
-    &a = (3.0 \pm 0.0)
+    &b = (6.00 \pm 0.08) \cdot 10^4 \text{ nm$^2$} \\
+    &a = (3.009 \pm 0.003)
 \end{align*}
 
 Eseguendo il test del "chi quadro" otteniamo i seguenti risultati:
 \begin{align*}
-    &\chi_{tot}^2 = 5.9\\
+    &\chi_{tot}^2 = 5.3\\
     &\text{GdL} = 4 \\
-    &\tilde{\chi}^2= 1.5 \\
+    &\tilde{\chi}^2= 1.3 \\
 \end{align*}
-che corrisponde ad una probabilità del 21\%, a significare che la distribuzione osservata e' descrivibile con la relazione di Cauchy.
+che corrisponde ad una probabilità del 26\%, a significare che la distribuzione osservata e' descrivibile con la relazione di Cauchy.
 
 Inoltre notiamo che la misura relativa alla riga del giallo di sinistra, "giallo sx", ha un "chi quadro" molto alto rispetto alle altre misure, come evidenziato dalla tabella sottostante:
 \begin{table}[!htbp]
@@ -518,8 +546,8 @@ Inoltre notiamo che la misura relativa alla riga del giallo di sinistra, "giallo
         giallo sx   &   3.184   &   2.97$\cdot$10$^{-6}$  & 0.003   &   3.188   &   2.9\\
         indaco      &   3.328   &   5.29$\cdot$10$^{-6}$  & 0.002   &   3.326   &   0.9\\
         giallo dx   &   3.188   &   3.00$\cdot$10$^{-6}$  & 0.005   &   3.191   &   0.3\\
-        verde scuro &   3.256   &   4.14$\cdot$10$^{-6}$  & 0.002   &   3.258   &   1.0\\
-        rosso       &   3.137   &   2.10$\cdot$10$^{-6}$  & 0.001   &   3.137   &   0.6\\
+        verde scuro &   3.256   &   4.14$\cdot$10$^{-6}$  & 0.002   &   3.258   &   1.1\\
+        rosso       &   3.137   &   2.10$\cdot$10$^{-6}$  & 0.001   &   3.137   &   0.1\\
         \hline
     \end{tabular}
     \par}
